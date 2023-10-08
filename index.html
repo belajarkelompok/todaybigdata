@@ -324,6 +324,14 @@
   	}
   	}, 400)
   }
+
+  $("#collapseExample").on("shown", function () {
+      var selected = $(this);
+      var collapseh = $(".collapse .in").height();
+      $.scrollTo(selected, 500, {
+          offset: -(collapseh)
+      });
+  });
 </script>    
     
   </body>
