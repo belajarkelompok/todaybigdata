@@ -326,6 +326,7 @@
   }
 
   $("#collapseExample").on("shown", function () {
+      console.log('Hi...');
       var selected = $(this);
       var collapseh = $(".collapse").height();
       $.scrollTo(selected, 500, {
