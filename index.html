@@ -327,10 +327,8 @@
 
   $('#collapseExample').on('shown.bs.collapse', function () {
       console.log('Hi...');
-      var selected = $(this);
-      var collapseh = $(".collapse").height();
-      $.scrollTo(selected, 500, {
-          offset: -(collapseh)
+      var id = $(this).attr('id');
+      $('html, body').animate({scrollTop: $('#'+id).offset().top + -50}, 1000);
       });
   });
 </script>    
