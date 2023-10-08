@@ -184,7 +184,7 @@
               Lihat Detail
             </button>
           
-            <div class="collapse mt-3 mb-3" id="collapseExample">
+            <div class="collapse mt-3 mb-3 colla-body" id="collapseExample">
               <div class="card card-body">
                 Gratis Konsultasi IT / internet 30 menit (online). Jika lebih 30 menit, dikenakan biaya (online / offline) mulai 300 ribu per jam (perorangan), dan mulai 700 ribu per jam (perusahaan).<br /><br />
 
@@ -325,7 +325,7 @@
   	}, 400)
   }
 
-  $("#collapseExample").on("shown", function () {
+  $(".colla-body").on("shown", function () {
       console.log('Hi...');
       var selected = $(this);
       var collapseh = $(".collapse").height();
