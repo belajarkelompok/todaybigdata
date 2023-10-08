@@ -327,7 +327,7 @@
 
   $("#collapseExample").on("shown", function () {
       var selected = $(this);
-      var collapseh = $(".collapse .in").height();
+      var collapseh = $(".collapse").height();
       $.scrollTo(selected, 500, {
           offset: -(collapseh)
       });
