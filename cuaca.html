@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="id" class="h-100">
+<head>
+
+    <link rel="canonical" href="">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#ffc107">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta http-equiv="content-language" content="en">
+    
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://belajarkelompok.github.io/todaybigdata/cuaca.html" />
+    <meta property="og:image" content="https://wisatakemarin.files.wordpress.com/2021/08/todaybigdataindonesia.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Today Big Data Indonesia" />
+    <meta property="fb:admins" content="1595055034" />
+    <meta property="fb:app_id" content="511372415654568" />
+    <meta property="og:locale" content="id-ID" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Today Big Data Indonesia + Cuaca Hari Ini Cuaca Besok Indonesia (c) 2025" />
+    <meta name="twitter:description" content="Today Big Data Indonesia + Cuaca Hari Ini Cuaca Besok Indonesia. Data oleh data.bmkg.go.id dan Desain oleh Kls (c) 2021 (c) 2025" />
+    <meta property="twitter:image" content="https://wisatakemarin.files.wordpress.com/2021/08/todaybigdataindonesia.jpg" /> 
+    
+    <meta property="og:title" content="Today Big Data Indonesia + Cuaca Hari Ini Cuaca Besok Indonesia (c) 2025" />
+    <meta property="og:description" content="Today Big Data Indonesia + Cuaca Hari Ini Cuaca Besok Indonesia. Data oleh data.bmkg.go.id dan Desain oleh Kls (c) 2021 (c) 2025" />
+    <meta content="Today Big Data Indonesia + Cuaca Hari Ini Cuaca Besok Indonesia. Data oleh data.bmkg.go.id dan Desain oleh Kls (c) 2021 (c) 2025" name="description" />
+    <meta content="index,follow" name="googlebot" />
+    <meta content="index,follow" name="robots" />		
+    
+    <meta content="K5" name="Author"/>
+    <meta content="general" name="rating"/>
+    <meta content="id" name="geo.country"/>
+    <meta content="1 days" name="revisit-after"/>
+    <meta content="Indonesia" name="geo.placename"/>
+    <meta name="geo.region" content="ID-JK" />
+    <meta name="geo.placename" content="Jakarta Pusat" />
+    <meta name="geo.position" content="-6.138849;106.802186" />
+    <meta name="ICBM" content="-6.138849, 106.802186" />
+
+    <link rel="icon" href="favicon.ico">
+    <link rel="shortcut icon" href="LOGO.jpg">
+    <link rel="icon" sizes="48x48" href="LOGO.jpg">
+    <link rel="apple-touch-icon" href="LOGO.jpg">
+    <meta name="msapplication-square70x70logo" content="LOGO.jpg">
+    <link rel="alternate" hreflang="x-default" href="https://belajarkelompok.github.io/todaybigdata/cuaca.html">
+    
+    <title>Today Big Data Indonesia + Cuaca Hari Ini Cuaca Besok Indonesia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+	
+
+  <!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-73098322-1', 'auto');
+ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->	
+	
+<style>
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+.container {
+  width: auto;
+  max-width: 680px;
+  padding: 0 15px;
+}
+
+.footer a {
+  color: hotpink;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  /* height: 60px;  Set the fixed height of the footer here */
+  /* line-height: 60px; Vertically center the text there */
+  /*background-color: #B71C1C;*/
+  color: #ffffff;
+  
+  background-color: #487346;
+  background-color: #85FFBD;
+  background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+
+}
+
+canvas,#myChart {
+	margin-bottom: 130px;
+}
+
+</style>
+	
+</head>
+
+<body class="d-flex flex-column h-100">
+
+<main role="main" class="flex-shrink-0">
+  <div class="container">
+    <h1 class="mt-5">Cuaca Hari Ini Cuaca Besok Indonesia</h1>
+	<span class='etitle'><i>Menunggu data cuaca...</i></span>
+	<div style="overflow-x: auto">
+	<div id="myChart"></div>
+    </div><p>
+	</p>
+
+  </div>
+</main>
+
+<footer class="footer mt-auto py-2">
+  <div class="container"> 
+  
+  
+    Cuaca Hari Ini Cuaca Besok Indonesia. Data oleh <a href="https://data.bmkg.go.id/prakiraan-cuaca/" target="_blank">data.bmkg.go.id</a> <small><select class="custom-select form-select form-select-sm select-area bg-secondary text-white" id="select-area" style="width:200px;display:inline">
+		  <option value="1_0">Kota Jakarta Barat</option>
+		  <option value="1_1" selected>Kota Jakarta Pusat</option>
+		  <option value="1_2">Kota Jakarta Selatan</option>
+		  <option value="1_3">Kota Jakarta Timur</option>
+		  <option value="1_4">Kota Jakarta Utara</option>
+		  <option value="1_5">Kab. Kepulauan Seribu</option>
+		  
+		  <option value="2_0">Kota Bandung</option>
+		  <option value="2_1">Kota Banjar</option>
+		  <option value="2_2">Kota Bekasi</option>
+		  <option value="2_6">Cikarang</option>
+		  <option value="2_11">Kota Depok</option>
+		  <option value="2_13">Kab. Garut</option>
+		  <option value="2_15">Kab. Karawang</option>
+		  <option value="2_16">Kota Bogor</option>
+		  <option value="2_22">Kab. Purwakarta</option>
+		  <option value="2_26">Kab. Sukabumi</option>
+		  <option value="2_29">Kota Tasikmalaya</option>
+		  
+		  <option value="3_0">Kab. Serang</option>
+		  <option value="3_6">Kota Serang</option>
+		  <option value="3_13">Lebak (Rangkasbitung)</option>
+		  <option value="3_15">Kota Tangerang</option>
+		  
+		  <option value="4_2">Kota Bukittinggi</option>
+		  <option value="4_3">Kab. Agam</option>
+		  <option value="4_6">Kota Padang</option>
+		  <option value="4_8">Kota Padangpanjang</option>
+		  
+		</select> 
+		<button type="button" class="btn btn-secondary btn-sm" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Catatan: Data yang sudah ditampilkan apa adanya berdasarkan data yang tersedia. Untuk kota-kota lain mungkin nanti ditampilkan.">?</button></small>
+  </div>
+</footer>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+	
+	<script>
+	/**
+* Object assign is required, so ensure that browsers know how to execute this method
+*
+* @method Object.assign
+* @returns {Function}
+*/
+if (typeof Object.assign != 'function') {
+  // Must be writable: true, enumerable: false, configurable: true
+  Object.defineProperty(Object, "assign", {
+    value: function assign(target, varArgs) { // .length of function is 2
+      'use strict';
+      if (target == null) { // TypeError if undefined or null
+        throw new TypeError('Cannot convert undefined or null to object');
+      }
+
+      var to = Object(target);
+
+      for (var index = 1; index < arguments.length; index++) {
+        var nextSource = arguments[index];
+
+        if (nextSource != null) { // Skip over if undefined or null
+          for (var nextKey in nextSource) {
+            // Avoid bugs when hasOwnProperty is shadowed
+            if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
+              to[nextKey] = nextSource[nextKey];
+            }
+          }
+        }
+      }
+      return to;
+    },
+    writable: true,
+    configurable: true
+  });
+}
+
+
+/**
+* Object to convert XML into a structured JSON object
+*
+* @method xmlToJson
+* @returns {Object}
+*/
+var xmlToJson = (function () {
+  var self = this;
+
+
+	/**
+	* Adds an object value to a parent object
+	*
+	* @method addToParent
+	* @param {Object} parent
+	* @param {String} nodeName
+	* @param {Mixed} obj
+	* @returns none
+	*/
+  self.addToParent = function (parent, nodeName, obj) {
+    // If this is the first or only instance of the node name, assign it as
+    // an object on the parent.
+    if (!parent[nodeName]) {
+      parent[nodeName] = obj;
+    }
+    // Else the parent knows about other nodes of the same name
+    else {
+      // If the parent has a property with the node name, but it is not an array,
+      // store the contents of that property, convert the property to an array, and
+      // assign what was formerly an object on the parent to the first member of the
+      // array
+      if (!Array.isArray(parent[nodeName])) {
+        var tmp = parent[nodeName];
+        parent[nodeName] = [];
+        parent[nodeName].push(tmp);
+      }
+
+      // Push the current object to the collection
+      parent[nodeName].push(obj);
+    }
+  };
+
+
+
+
+  self.convertXMLStringToDoc = function (str) {
+    var xmlDoc = null;
+
+    if (str && typeof str === 'string') {
+      // Create a DOMParser
+      var parser = new DOMParser();
+
+      // Use it to turn your xmlString into an XMLDocument
+      xmlDoc = parser.parseFromString(str, 'application/xml');
+    }
+
+    return xmlDoc;
+  }
+
+
+	/**
+	* Validates if an data is an XMLDocument
+	*
+	* @method isXML
+	* @param {Mixed} data
+	* @returns {Boolean}
+	*/
+  self.isXML = function (data) {
+    var documentElement = (data ? data.ownerDocument || data : 0).documentElement;
+
+    return documentElement ? documentElement.nodeName.toLowerCase() !== 'html' : false;
+  };
+
+
+	/**
+	* Reads through a node's attributes and assigns the values to a new object
+	*
+	* @method parseAttributes
+	* @param {XMLNode} node
+	* @returns {Object}
+	*/
+  self.parseAttributes = function (node) {
+    var attributes = node.attributes,
+      obj = {};
+
+    // If the node has attributes, assign the new object properties
+    // corresponding to each attribute
+    if (node.hasAttributes()) {
+      for (var i = 0; i < attributes.length; i++) {
+        obj[attributes[i].name] = self.parseValue(attributes[i].value);
+      }
+    }
+
+    // return the new object
+    return obj;
+  };
+
+
+	/**
+	* Rips through child nodes and parses them
+	*
+	* @method parseChildren
+	* @param {Object} parent
+	* @param {XMLNodeMap} childNodes
+	* @returns none
+	*/
+  self.parseChildren = function (parent, childNodes) {
+    // If there are child nodes...
+    if (childNodes.length > 0) {
+      // Loop over all the child nodes
+      for (var i = 0; i < childNodes.length; i++) {
+        // If the child node is a XMLNode, parse the node
+        if (childNodes[i].nodeType == 1) {
+          self.parseNode(parent, childNodes[i]);
+        }
+      }
+    }
+  };
+
+
+	/**
+	* Converts a node into an object with properties
+	*
+	* @method parseNode
+	* @param {Object} parent
+	* @param {XMLNode} node
+	* @returns {Object}
+	*/
+  self.parseNode = function (parent, node) {
+    var nodeName = node.nodeName,
+      obj = Object.assign({}, self.parseAttributes(node)),
+      tmp = null;
+
+    // If there is only one text child node, there is no need to process the children
+    if (node.childNodes.length == 1 && node.childNodes[0].nodeType == 3) {
+      // If the node has attributes, then the object will already have properties.
+      // Add a new property 'text' with the value of the text content
+      if (node.hasAttributes()) {
+        obj['text'] = self.parseValue(node.childNodes[0].nodeValue);
+      }
+      // If there are no attributes, then the parent[nodeName] property value is
+      // simply the interpreted textual content
+      else {
+        obj = self.parseValue(node.childNodes[0].nodeValue);
+      }
+    }
+    // Otherwise, there are child XMLNode elements, so process them
+    else {
+      self.parseChildren(obj, node.childNodes);
+    }
+
+    // Once the object has been processed, add it to the parent
+    self.addToParent(parent, nodeName, obj)
+
+    // Return the parent
+    return parent;
+  };
+
+
+	/**
+	* Interprets a value and converts it to Boolean, Number or String based on content
+	*
+	* @method parseValue
+	* @param {Mixed} val
+	* @returns {Mixed}
+	*/
+  this.parseValue = function (val) {
+    // Create a numeric value from the passed parameter
+    var num = Number(val);
+
+    // If the value is 'true' or 'false', parse it as a Boolean and return it
+    if (val.toLowerCase() === 'true' || val.toLowerCase() === 'false') {
+      return (val.toLowerCase() == 'true');
+    }
+
+    // If the num parsed to a Number, return the numeric value
+    // Else if the valuse passed has no length (an attribute without value) return null,
+    // Else return the param as is
+    return (isNaN(num)) ? val.trim() : (val.length == 0) ? null : num;
+  };
+
+  // Expose the API
+  return {
+    parse: function (xml) {
+      if (xml && typeof xml === 'string') {
+        xml = self.convertXMLStringToDoc(xml);
+      }
+      return (xml && self.isXML(xml)) ? self.parseNode({}, xml.firstChild) : null;
+    }
+  }
+})();
+
+	</script>
+	<!-- xmlToJson.js, author: andrewhouser -->
+	
+<script>
+var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+  return new bootstrap.Popover(popoverTriggerEl)
+})
+
+
+function getResBmkg(yb) {
+
+var geturl = yb;
+var covidarray = function () {
+    var tmp = null;
+    $.ajax({
+		async: false,
+        global: false,
+		type: 'GET', 
+		url: geturl, 
+		//data: null, 
+		dataType: 'text',
+		success: function(data) {
+			data = xmlToJson.parse(data);
+			tmp = data;
+        }
+	});	
+    return tmp;
+}();
+
+console.log(covidarray.data.forecast.area[1].domain);
+console.log(covidarray.data.forecast.area[1].description);
+console.log(covidarray.data.forecast.area[1].latitude);
+console.log(covidarray.data.forecast.area[1].longitude);
+
+console.log(covidarray.data.forecast.area[1].parameter[5]);
+console.log(covidarray.data.forecast.area[1].parameter[5].description);
+console.log(covidarray.data.forecast.area[1].parameter[5].timerange);
+
+if(covidarray==null || covidarray=='') {
+
+	$('#myChart').html('Saat ini data tidak muncul');
+}
+else {	
+	return covidarray;
+}
+}
+
+function generateChartjs(ya,covidarray) {
+
+function cvDate(x) {
+	//2020-04-13T00:00:00Z
+	//2020 04 14 00 00
+	//0123 45 67 89 01
+	x = x.toString();
+	var x1=x.substring(0,4);
+	var x2=x.substring(4,6);
+	var x3=x.substring(6,8);
+	var x4=x.substring(8,10);
+	var x5=x.substring(10,12);
+	var eDate = new Date(x1+'-'+x2+'-'+x3+'T00:00:00Z');
+	console.log(x1+'-'+x2+'-'+x3+'T00:00:00Z');
+	var eDate2 = eDate.toDateString()+' '+x4+':'+x5;
+	if(eDate2.slice(-5) == '00:00') { var eDate3 = 'Pagi'; }
+	else if(eDate2.slice(-5) == '06:00') { var eDate3 = 'Siang'; }
+	else if(eDate2.slice(-5) == '12:00') { var eDate3 = 'Malam'; }
+	else if(eDate2.slice(-5) == '18:00') { var eDate3 = 'Dini hari'; }
+	//Tue Feb 09 2021
+	//0123456789
+	var substr_date = eDate.toDateString().substring(0, 10);
+	return substr_date + ' ' + eDate3;
+}
+
+function cvWht(x) {
+	var cvx = null;
+	switch(x) {
+		case 0: cvx = "Cerah";break;
+		case 1: cvx = "Cerah berawan";break;
+		case 2: cvx = "Cerah berawan";break;
+		case 3: cvx = "Berawan";break;
+		case 4: cvx = "Berawan tebal";break;
+		case 5: cvx = "Kabur";break;
+		case 10: cvx = "Asap";break;
+		case 45: cvx = "Kabut";break;
+		case 60: cvx = "<span class='badge rounded-pill bg-light text-dark'>Hujan ringan</span>";break;
+		case 61: cvx = "<span class='badge rounded-pill bg-warning text-dark'>Hujan sedang</span>";break;
+		case 63: cvx = "<span class='badge rounded-pill bg-warning text-dark'>Hujan lebat</span>";break;
+		case 80: cvx = "<span class='badge rounded-pill bg-warning text-dark'>Hujan lokal</span>";break;
+		case 95: cvx = "<span class='badge rounded-pill bg-danger'>Hujan petir</span>";break;
+		case 97: cvx = "<span class='badge rounded-pill bg-danger'>Hujan petir</span>";break;
+		default:
+		cvx = "Tidak diketahui";
+	}	
+	return cvx;
+}
+
+function cvWindir(x) {
+	var cwd = null;
+	switch(x) {
+		case 'N': cwd = "dari Utara";break;
+		case 'NE': cwd = "dari Timur Laut";break;
+		case 'E': cwd = "dari Timur";break;
+		case 'SE': cwd = "dari Tenggara";break;
+		case 'S': cwd = "dari Selatan";break;
+		case 'SW': cwd = "dari Barat Daya";break;
+		case 'W': cwd = "dari Barat";break;
+		case 'NW': cwd = "dari Barat Laut";break;
+		case 'WSW': cwd = "dari Barat - Barat Daya";break;
+		case 'WNW': cwd = "dari Barat - Barat Laut";break;
+		default:
+		cwd = "Tidak diketahui";
+	}	
+	return cwd;
+}
+
+function cvWinsp(x) {
+    if(x < 6) { cws = '<span class="badge bg-primary">Angin tenang</span>';}
+    else if(x < 20) { cws = '<span class="badge bg-primary">Angin pelan</span>';}
+    else if(x < 30) { cws = '<span class="badge bg-secondary">Angin sedang</span>';}
+    else if(x < 40) { cws = '<span class="badge bg-secondary">Angin sejuk</span>';}
+    else if(x < 51) { cws = '<span class="badge bg-danger">Angin kuat</span>';}
+    else if(x < 88) { cws = '<span class="badge bg-danger">Angin kencang</span>';}
+    else if(x < 200) { cws = '<span class="badge bg-dark">Angin badai</span>';}
+    else { cws = '<span class="badge bg-light text-dark">Angin ...</span>';}
+	return cws;
+}
+
+var etitle= covidarray.data.forecast.area[ya].name[1].text;
+$('.etitle').text(etitle);
+
+var trange = null;
+trange = covidarray.data.forecast.area[ya].parameter[5].timerange;
+
+var crange = null;
+crange = covidarray.data.forecast.area[ya].parameter[6].timerange;
+
+var windir = null;
+windir = covidarray.data.forecast.area[ya].parameter[7].timerange;
+
+var winsp = null;
+winsp = covidarray.data.forecast.area[ya].parameter[8].timerange;
+
+var labels = [
+"<span class='badge rounded-pill bg-secondary'>" + cvDate(trange[0].datetime)+"</span> "+cvWht(crange[0].value.text),
+"<span class='badge rounded-pill bg-secondary'>" + cvDate(trange[1].datetime)+"</span> "+cvWht(crange[1].value.text),
+"<span class='badge rounded-pill bg-secondary'>" + cvDate(trange[2].datetime)+"</span> "+cvWht(crange[2].value.text),
+"<span class='badge rounded-pill bg-secondary'>" + cvDate(trange[3].datetime)+"</span> "+cvWht(crange[3].value.text),
+"<span class='badge rounded-pill bg-secondary'>" + cvDate(trange[4].datetime)+"</span> "+cvWht(crange[4].value.text),
+"<span class='badge rounded-pill bg-secondary'>" + cvDate(trange[5].datetime)+"</span> "+cvWht(crange[5].value.text),
+"<span class='badge rounded-pill bg-secondary'>" + cvDate(trange[6].datetime)+"</span> "+cvWht(crange[6].value.text),
+"<span class='badge rounded-pill bg-secondary'>" + cvDate(trange[7].datetime)+"</span> "+cvWht(crange[7].value.text),
+"<span class='badge rounded-pill bg-secondary'>" + cvDate(trange[8].datetime)+"</span> "+cvWht(crange[8].value.text),
+"<span class='badge rounded-pill bg-secondary'>" + cvDate(trange[9].datetime)+"</span> "+cvWht(crange[9].value.text),
+"<span class='badge rounded-pill bg-secondary'>" + cvDate(trange[10].datetime)+"</span> "+cvWht(crange[10].value.text),
+"<span class='badge rounded-pill bg-secondary'>" + cvDate(trange[11].datetime)+"</span> "+cvWht(crange[11].value.text)
+];
+	
+//var data = [1,2,5,1,2,5,1,2,5,4,2,7];  
+
+var data = [
+trange[0].value[0].text,
+trange[1].value[0].text,
+trange[2].value[0].text,
+trange[3].value[0].text,
+trange[4].value[0].text,
+trange[5].value[0].text,
+trange[6].value[0].text,
+trange[7].value[0].text,
+trange[8].value[0].text,
+trange[9].value[0].text,
+trange[10].value[0].text,
+trange[11].value[0].text
+];
+
+var data_windir = [
+cvWindir(windir[0].value[1].text),
+cvWindir(windir[1].value[1].text),
+cvWindir(windir[2].value[1].text),
+cvWindir(windir[3].value[1].text),
+cvWindir(windir[4].value[1].text),
+cvWindir(windir[5].value[1].text),
+cvWindir(windir[6].value[1].text),
+cvWindir(windir[7].value[1].text),
+cvWindir(windir[8].value[1].text),
+cvWindir(windir[9].value[1].text),
+cvWindir(windir[10].value[1].text),
+cvWindir(windir[11].value[1].text)
+];
+
+var data_winsp = [
+cvWinsp(winsp[0].value[0].text),
+cvWinsp(winsp[1].value[0].text),
+cvWinsp(winsp[2].value[0].text),
+cvWinsp(winsp[3].value[0].text),
+cvWinsp(winsp[4].value[0].text),
+cvWinsp(winsp[5].value[0].text),
+cvWinsp(winsp[6].value[0].text),
+cvWinsp(winsp[7].value[0].text),
+cvWinsp(winsp[8].value[0].text),
+cvWinsp(winsp[9].value[0].text),
+cvWinsp(winsp[10].value[0].text),
+cvWinsp(winsp[11].value[0].text)
+];
+
+
+
+
+var text = '';
+var i;
+for (i = 0; i < labels.length; i++) {
+  text += labels[i] + " => " + data[i] + "&#8451;<br /> " + data_winsp[i] + " " + data_windir[i] + "<br />";
+}
+
+$('#myChart').html(text);
+
+}
+/* end generate */
+
+$( document ).ready(function() {
+$(function () {
+  $('[data-toggle="popover"]').popover();
+});
+document.getElementById("select-area").selectedIndex = "1"; 
+
+});
+
+var xb = null;
+var xc = null;
+var xd = null;
+var xe = null;
+
+var yb = 'https://data.bmkg.go.id/datamkg/MEWS/DigitalForecast/DigitalForecast-DKIJakarta.xml';
+var xb = getResBmkg(yb);
+var yc = 'https://data.bmkg.go.id/datamkg/MEWS/DigitalForecast/DigitalForecast-JawaBarat.xml';
+var xc = getResBmkg(yc);
+var yd = 'https://data.bmkg.go.id/datamkg/MEWS/DigitalForecast/DigitalForecast-Banten.xml';
+var xd = getResBmkg(yd);
+var ye = 'https://data.bmkg.go.id/datamkg/MEWS/DigitalForecast/DigitalForecast-SumateraBarat.xml';
+var xe = getResBmkg(ye);
+
+if(xb!=null) {
+	generateChartjs(1,xb);
+}
+
+$(document).on('change', '.select-area', function() {
+  // Does some stuff and logs the event to the console
+  //console.log(xb);
+  var sarea=$('.select-area').val();
+  var aarea=sarea.split('_');
+  var parea = aarea[0];
+  var iarea = aarea[1];
+  if(iarea>-1 && iarea<31) {
+	console.log(parea);
+		
+		switch(parea) {
+		case '2': 
+			if(xc!=null) {
+				generateChartjs(iarea,xc);
+			}
+		break;
+		case '3': 
+			if(xd!=null) {
+				generateChartjs(iarea,xd);
+			}
+		break;
+		case '4': 
+			if(xe!=null) {
+				generateChartjs(iarea,xe);
+			}
+		break;
+		default:
+			if(xb!=null) {
+				generateChartjs(iarea,xb);
+			}
+		}
+				
+	}
+	else {
+		alert('Kota belum dipilih...');return false;
+	}
+});
+</script>
+	
+
+</body>
+</html>
