@@ -53,7 +53,8 @@
     <link rel="alternate" hreflang="x-default" href="https://belajarkelompok.github.io/todaybigdata/cuaca.html">
     
     <title>Today Big Data Indonesia: Cuaca Hari Ini Cuaca Besok Indonesia</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 	
 
@@ -105,6 +106,10 @@ canvas,#myChart {
 	margin-bottom: 130px;
 }
 
+.img_cuaca {
+	height: 100px;
+}
+
 </style>
 	
 </head>
@@ -136,7 +141,7 @@ canvas,#myChart {
     <h1 class="mt-1">Cuaca Hari Ini Cuaca Besok Indonesia</h1>
 	<span class='etitle'><i>Menunggu data cuaca...</i></span>
 	<div style="overflow-x: auto">
-	<div id="myChart"></div>
+	<div id="myChart" class="mt-3"></div>
     </div><p>
 	</p>
 
@@ -147,9 +152,15 @@ canvas,#myChart {
   <div class="container"> 
   
   
-    <span class="footer_speech">Cuaca Hari Ini Cuaca Besok Indonesia (v2). Data oleh</span> <a href="https://data.bmkg.go.id/prakiraan-cuaca/" target="_blank">data.bmkg.go.id</a> <span class="footer_speech">. (c) Kls 2025</span> <small><select class="custom-select form-select form-select-sm select-area bg-secondary text-white" id="select-area" style="width:200px;display:inline">
-		  <option value="1_0">Kota Jakarta Barat</option>
-		  <option value="1_1" selected>Kota Jakarta Pusat</option>
+    <span class="footer_speech">Cuaca Hari Ini Cuaca Besok Indonesia. Data oleh</span> <a href="https://data.bmkg.go.id/prakiraan-cuaca/" target="_blank">data.bmkg.go.id</a>  <small><select class="custom-select form-select form-select-sm select-area bg-secondary text-white" id="select-area" style="width:200px;display:inline">
+		  <option value="31.71.01.1001">Gambir</option>
+		  <option value="31.71.01.1002" selected>Cideng</option>
+		  <option value="31.71.01.1003">Petojo Utara</option>
+		  <option value="31.71.01.1004">Petojo Selatan</option>
+		  <option value="31.71.01.1005">Kebon Kelapa</option>
+		  <option value="31.71.01.1006">Duri Pulo</option>
+		  
+		  <!--
 		  <option value="1_2">Kota Jakarta Selatan</option>
 		  <option value="1_3">Kota Jakarta Timur</option>
 		  <option value="1_4">Kota Jakarta Utara</option>
@@ -176,7 +187,7 @@ canvas,#myChart {
 		  <option value="4_3">Kab. Agam</option>
 		  <option value="4_6">Kota Padang</option>
 		  <option value="4_8">Kota Padangpanjang</option>
-		  
+		  -->
 		</select> 
 		<button type="button" class="btn btn-secondary btn-sm d-inline-flex focus-ring py-1 px-2 text-decoration-none border" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Info: Data yang sudah ditampilkan apa adanya berdasarkan data yang tersedia. Untuk kota-kota lain mungkin nanti ditampilkan.">?</button></small>
   </div>
@@ -184,240 +195,9 @@ canvas,#myChart {
 
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 	
-	<script>
-	/**
-* Object assign is required, so ensure that browsers know how to execute this method
-*
-* @method Object.assign
-* @returns {Function}
-*/
-if (typeof Object.assign != 'function') {
-  // Must be writable: true, enumerable: false, configurable: true
-  Object.defineProperty(Object, "assign", {
-    value: function assign(target, varArgs) { // .length of function is 2
-      'use strict';
-      if (target == null) { // TypeError if undefined or null
-        throw new TypeError('Cannot convert undefined or null to object');
-      }
 
-      var to = Object(target);
-
-      for (var index = 1; index < arguments.length; index++) {
-        var nextSource = arguments[index];
-
-        if (nextSource != null) { // Skip over if undefined or null
-          for (var nextKey in nextSource) {
-            // Avoid bugs when hasOwnProperty is shadowed
-            if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
-              to[nextKey] = nextSource[nextKey];
-            }
-          }
-        }
-      }
-      return to;
-    },
-    writable: true,
-    configurable: true
-  });
-}
-
-
-/**
-* Object to convert XML into a structured JSON object
-*
-* @method xmlToJson
-* @returns {Object}
-*/
-var xmlToJson = (function () {
-  var self = this;
-
-
-	/**
-	* Adds an object value to a parent object
-	*
-	* @method addToParent
-	* @param {Object} parent
-	* @param {String} nodeName
-	* @param {Mixed} obj
-	* @returns none
-	*/
-  self.addToParent = function (parent, nodeName, obj) {
-    // If this is the first or only instance of the node name, assign it as
-    // an object on the parent.
-    if (!parent[nodeName]) {
-      parent[nodeName] = obj;
-    }
-    // Else the parent knows about other nodes of the same name
-    else {
-      // If the parent has a property with the node name, but it is not an array,
-      // store the contents of that property, convert the property to an array, and
-      // assign what was formerly an object on the parent to the first member of the
-      // array
-      if (!Array.isArray(parent[nodeName])) {
-        var tmp = parent[nodeName];
-        parent[nodeName] = [];
-        parent[nodeName].push(tmp);
-      }
-
-      // Push the current object to the collection
-      parent[nodeName].push(obj);
-    }
-  };
-
-
-
-
-  self.convertXMLStringToDoc = function (str) {
-    var xmlDoc = null;
-
-    if (str && typeof str === 'string') {
-      // Create a DOMParser
-      var parser = new DOMParser();
-
-      // Use it to turn your xmlString into an XMLDocument
-      xmlDoc = parser.parseFromString(str, 'application/xml');
-    }
-
-    return xmlDoc;
-  }
-
-
-	/**
-	* Validates if an data is an XMLDocument
-	*
-	* @method isXML
-	* @param {Mixed} data
-	* @returns {Boolean}
-	*/
-  self.isXML = function (data) {
-    var documentElement = (data ? data.ownerDocument || data : 0).documentElement;
-
-    return documentElement ? documentElement.nodeName.toLowerCase() !== 'html' : false;
-  };
-
-
-	/**
-	* Reads through a node's attributes and assigns the values to a new object
-	*
-	* @method parseAttributes
-	* @param {XMLNode} node
-	* @returns {Object}
-	*/
-  self.parseAttributes = function (node) {
-    var attributes = node.attributes,
-      obj = {};
-
-    // If the node has attributes, assign the new object properties
-    // corresponding to each attribute
-    if (node.hasAttributes()) {
-      for (var i = 0; i < attributes.length; i++) {
-        obj[attributes[i].name] = self.parseValue(attributes[i].value);
-      }
-    }
-
-    // return the new object
-    return obj;
-  };
-
-
-	/**
-	* Rips through child nodes and parses them
-	*
-	* @method parseChildren
-	* @param {Object} parent
-	* @param {XMLNodeMap} childNodes
-	* @returns none
-	*/
-  self.parseChildren = function (parent, childNodes) {
-    // If there are child nodes...
-    if (childNodes.length > 0) {
-      // Loop over all the child nodes
-      for (var i = 0; i < childNodes.length; i++) {
-        // If the child node is a XMLNode, parse the node
-        if (childNodes[i].nodeType == 1) {
-          self.parseNode(parent, childNodes[i]);
-        }
-      }
-    }
-  };
-
-
-	/**
-	* Converts a node into an object with properties
-	*
-	* @method parseNode
-	* @param {Object} parent
-	* @param {XMLNode} node
-	* @returns {Object}
-	*/
-  self.parseNode = function (parent, node) {
-    var nodeName = node.nodeName,
-      obj = Object.assign({}, self.parseAttributes(node)),
-      tmp = null;
-
-    // If there is only one text child node, there is no need to process the children
-    if (node.childNodes.length == 1 && node.childNodes[0].nodeType == 3) {
-      // If the node has attributes, then the object will already have properties.
-      // Add a new property 'text' with the value of the text content
-      if (node.hasAttributes()) {
-        obj['text'] = self.parseValue(node.childNodes[0].nodeValue);
-      }
-      // If there are no attributes, then the parent[nodeName] property value is
-      // simply the interpreted textual content
-      else {
-        obj = self.parseValue(node.childNodes[0].nodeValue);
-      }
-    }
-    // Otherwise, there are child XMLNode elements, so process them
-    else {
-      self.parseChildren(obj, node.childNodes);
-    }
-
-    // Once the object has been processed, add it to the parent
-    self.addToParent(parent, nodeName, obj)
-
-    // Return the parent
-    return parent;
-  };
-
-
-	/**
-	* Interprets a value and converts it to Boolean, Number or String based on content
-	*
-	* @method parseValue
-	* @param {Mixed} val
-	* @returns {Mixed}
-	*/
-  this.parseValue = function (val) {
-    // Create a numeric value from the passed parameter
-    var num = Number(val);
-
-    // If the value is 'true' or 'false', parse it as a Boolean and return it
-    if (val.toLowerCase() === 'true' || val.toLowerCase() === 'false') {
-      return (val.toLowerCase() == 'true');
-    }
-
-    // If the num parsed to a Number, return the numeric value
-    // Else if the valuse passed has no length (an attribute without value) return null,
-    // Else return the param as is
-    return (isNaN(num)) ? val.trim() : (val.length == 0) ? null : num;
-  };
-
-  // Expose the API
-  return {
-    parse: function (xml) {
-      if (xml && typeof xml === 'string') {
-        xml = self.convertXMLStringToDoc(xml);
-      }
-      return (xml && self.isXML(xml)) ? self.parseNode({}, xml.firstChild) : null;
-    }
-  }
-})();
-
-	</script>
-	<!-- xmlToJson.js, author: andrewhouser -->
 	
 <script>
 var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
@@ -439,21 +219,14 @@ var covidarray = function () {
 		//data: null, 
 		dataType: 'text',
 		success: function(data) {
-			data = xmlToJson.parse(data);
-			tmp = data;
+			tmp = JSON.parse(data);
         }
 	});	
     return tmp;
 }();
 
-console.log(covidarray.data.forecast.area[1].domain);
-console.log(covidarray.data.forecast.area[1].description);
-console.log(covidarray.data.forecast.area[1].latitude);
-console.log(covidarray.data.forecast.area[1].longitude);
+//console.log(covidarray.data[0].cuaca);
 
-console.log(covidarray.data.forecast.area[1].parameter[5]);
-console.log(covidarray.data.forecast.area[1].parameter[5].description);
-console.log(covidarray.data.forecast.area[1].parameter[5].timerange);
 
 if(covidarray==null || covidarray=='') {
 
@@ -465,7 +238,53 @@ else {
 }
 
 function generateChartjs(ya,covidarray) {
+	
+	let plain_data = covidarray.data[0].cuaca;
+	let arr_data = [];
+	
+	if(Array.isArray(plain_data) == true ) {
+		for(var i=0; i<plain_data.length; i++) {
+			//console.log(plain_data[i]);
+			
+			if(Array.isArray(plain_data[i]) == true ) {
+				for(var j=0; j<plain_data[i].length; j++) {
+					//console.log(plain_data[i][j]);
+					
+					arr_data.push(plain_data[i][j])
+					
+					
+				}	
+			
+			}
+			
+		}	
+	
+	}
+	
+	console.log(arr_data);
+	
+	var text = '';
+	
+	if(arr_data != null) {
+		var k;
+		for (k = 0; k < arr_data.length; k++) {
+		  //text += arr_data[k].local_datetime + " => " + arr_data[k].image + "<br />";
+		  text += "<div class='row'><div class='col border border-primary'>"+ arr_data[k].local_datetime +"</div> <div class='col border border-primary'><img class='img_cuaca' src ='"+ arr_data[k].image +"' alt='" + arr_data[k].weather_desc + "'/></div> </div>";
+		}
+	
+	}
+	
+	if(text != '') {
+		var etitle= "<strong>" + covidarray.data[0].lokasi.desa + ', ' + covidarray.data[0].lokasi.kecamatan + ', ' +covidarray.data[0].lokasi.kotkab + "</strong>";
+		$('.etitle').html(etitle);
+		
+		$('#myChart').html(text);
+	
+	
+	}
+	
 
+/*
 function cvDate(x) {
 	//2020-04-13T00:00:00Z
 	//2020 04 14 00 00
@@ -629,16 +448,7 @@ cvWinsp(winsp[11].value[0].text)
 ];
 
 
-
-
-var text = '';
-var i;
-for (i = 0; i < labels.length; i++) {
-  text += labels[i] + " => " + data[i] + "&#8451;<br /> " + data_winsp[i] + " " + data_windir[i] + "<br />";
-}
-
-$('#myChart').html(text);
-
+*/
 }
 /* end generate */
 
@@ -651,59 +461,40 @@ document.getElementById("select-area").selectedIndex = "1";
 });
 
 var xb = null;
-var xc = null;
-var xd = null;
-var xe = null;
+var cur_sarea=$('.select-area').val();
 
-var yb = 'https://data.bmkg.go.id/datamkg/MEWS/DigitalForecast/DigitalForecast-DKIJakarta.xml';
-var xb = getResBmkg(yb);
-var yc = 'https://data.bmkg.go.id/datamkg/MEWS/DigitalForecast/DigitalForecast-JawaBarat.xml';
-var xc = getResBmkg(yc);
-var yd = 'https://data.bmkg.go.id/datamkg/MEWS/DigitalForecast/DigitalForecast-Banten.xml';
-var xd = getResBmkg(yd);
-var ye = 'https://data.bmkg.go.id/datamkg/MEWS/DigitalForecast/DigitalForecast-SumateraBarat.xml';
-var xe = getResBmkg(ye);
+if(cur_sarea!=null) {
+	var scur_sarea = cur_sarea.substring(0, 14);
+	var yb = 'https://api.bmkg.go.id/publik/prakiraan-cuaca?adm4=' + scur_sarea;
+	var xb = getResBmkg(yb);
+}
+
+
 
 if(xb!=null) {
 	generateChartjs(1,xb);
 }
 
 $(document).on('change', '.select-area', function() {
-  // Does some stuff and logs the event to the console
-  //console.log(xb);
-  var sarea=$('.select-area').val();
-  var aarea=sarea.split('_');
-  var parea = aarea[0];
-  var iarea = aarea[1];
-  if(iarea>-1 && iarea<31) {
-	console.log(parea);
-		
-		switch(parea) {
-		case '2': 
-			if(xc!=null) {
-				generateChartjs(iarea,xc);
-			}
-		break;
-		case '3': 
-			if(xd!=null) {
-				generateChartjs(iarea,xd);
-			}
-		break;
-		case '4': 
-			if(xe!=null) {
-				generateChartjs(iarea,xe);
-			}
-		break;
-		default:
-			if(xb!=null) {
-				generateChartjs(iarea,xb);
-			}
+	var cur_sarea=$(this).val();
+	//console.log(cur_sarea);
+
+	if(cur_sarea!=null) {
+		var scur_sarea = cur_sarea.substring(0, 14);
+		var yb = 'https://api.bmkg.go.id/publik/prakiraan-cuaca?adm4=' + scur_sarea;
+		var xb = getResBmkg(yb);
+		if(xb != null ) {
+			generateChartjs(1,xb);
 		}
-				
+		else {
+			alert('Data sedang tidak tersedia. Coba lagi nanti...');return false;
+		}
 	}
 	else {
 		alert('Kota belum dipilih...');return false;
 	}
+	
+
 });
 </script>
 	
