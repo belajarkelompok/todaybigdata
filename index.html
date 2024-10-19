@@ -1,6 +1,6 @@
-<!DOCTYPE html>
-<html lang="id" class="h-100">
-<head>
+<!doctype html>
+<html lang="en">
+  <head>
 
     <link rel="canonical" href="">
 
@@ -9,13 +9,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="theme-color" content="#85FFBD">
+    <meta name="theme-color" content="#ffc107">
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
     <meta http-equiv="content-language" content="en">
     
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://belajarkelompok.github.io/todaybigdata/cuaca.html" />
+    <meta property="og:url" content="https://belajarkelompok.github.io/todaybigdata/" />
+    <meta property="og:title" content="Today Big Data Indonesia (c) 2024" />
     <meta property="og:image" content="https://wisatakemarin.files.wordpress.com/2021/08/todaybigdataindonesia.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
@@ -25,13 +26,13 @@
     <meta property="fb:app_id" content="511372415654568" />
     <meta property="og:locale" content="id-ID" />
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Today Big Data Indonesia: Cuaca Hari Ini Cuaca Besok Indonesia (c) 2025" />
-    <meta name="twitter:description" content="Today Big Data Indonesia. Cuaca Hari Ini Cuaca Besok Indonesia. Data oleh data.bmkg.go.id dan Desain oleh Kls (c) 2021 (c) 2025" />
+    <meta name="twitter:title" content="Today Big Data Indonesia GEMPA BUMI" />
+    <meta name="twitter:description" content="Today Big Data Indonesia, Data Gempa Bumi BMKG" />
     <meta property="twitter:image" content="https://wisatakemarin.files.wordpress.com/2021/08/todaybigdataindonesia.jpg" /> 
     
-    <meta property="og:title" content="Today Big Data Indonesia: Cuaca Hari Ini Cuaca Besok Indonesia (c) 2025" />
-    <meta property="og:description" content="Today Big Data Indonesia. Cuaca Hari Ini Cuaca Besok Indonesia. Data oleh data.bmkg.go.id dan Desain oleh Kls (c) 2021 (c) 2025" />
-    <meta content="Today Big Data Indonesia. Cuaca Hari Ini Cuaca Besok Indonesia. Data oleh data.bmkg.go.id dan Desain oleh Kls (c) 2021 (c) 2025" name="description" />
+    <meta property="og:title" content="Today Big Data Indonesia GEMPA BUMI" />
+    <meta property="og:description" content="Today Big Data Indonesia, Data Gempa Bumi BMKG" />
+    <meta content="Today Big Data Indonesia, Data Gempa Bumi BMKG" name="description" />
     <meta content="index,follow" name="googlebot" />
     <meta content="index,follow" name="robots" />		
     
@@ -50,15 +51,64 @@
     <link rel="icon" sizes="48x48" href="LOGO.jpg">
     <link rel="apple-touch-icon" href="LOGO.jpg">
     <meta name="msapplication-square70x70logo" content="LOGO.jpg">
-    <link rel="alternate" hreflang="x-default" href="https://belajarkelompok.github.io/todaybigdata/cuaca.html">
+    <link rel="alternate" hreflang="x-default" href="https://belajarkelompok.github.io/todaybigdata">
     
-    <title>Today Big Data Indonesia: Cuaca Hari Ini Cuaca Besok Indonesia</title>
-	
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Today Big Data</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-	
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
+    <style>
+    body {
+      background-color: #f2f2f2;
+      /*border: 1px solid #111111;*/
+    }
+
+    .btn,  
+    .bor-radius1 {
+      border-radius: 16px;
+    }
+
+    .card {
+      border-radius: 13px;
+    }  
+
+    .container1 {
+      border-radius: 10px;
+      border: 1px solid #999999;
+    }
+
+    .container2 {
+      padding-bottom:250px;
+      margin-bottom:250px;
+    }  
+
+    #youtube-player {
+      position: fixed;
+      bottom: 50px;
+      right: 1px;
+      z-index: 4999;
+    }
+
+    .footer-nav {
+        z-index: 5000;
+        backdrop-filter: saturate(180%) blur(20px);
+        background-color: rgba(255,255,255,0.62);
+    }  
+
+    /* loadText */
+    .hidden {
+      opacity:0;
+    }
+    .console-underscore {
+      display:inline-block;
+      position:relative;
+      top:-0.14em;
+      font-weight: 700; /* bold */
+    }
+    /* end loadText*/ 
+    </style>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NM7JLKQBCJ"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -67,437 +117,249 @@
     
       gtag('config', 'G-NM7JLKQBCJ');
     </script>
-	
-<style>
-/* Custom page CSS
--------------------------------------------------- */
-/* Not required for template or sticky footer method. */
+    
+  </head>
+  <body>
 
-.container {
-  width: auto;
-  max-width: 680px;
-  padding: 0 15px;
-}
-
-.right-box {
-  
-}
-
-.btn-radius1 {
-  border-radius: 16px;
-}
-
-.footer a, .footer_speech {
-  color: hotpink;
-}
-
-.footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  color: #ffffff;
-  
-  background: rgb(255,255,255);
-  background: linear-gradient(45deg, rgba(255,255,255,0.8) 0%, rgba(133,255,189,0.9044410000328256) 0%, rgba(255,251,125,0.929651084066439) 100%);
-
-}
-
-canvas,#myChart {
-	margin-bottom: 130px;
-}
-
-.img_cuaca {
-	height: 100px;
-}
-
-</style>
-	
-</head>
-
-<body class="d-flex flex-column h-100">
-
-
-
-<main role="main" class="flex-shrink-0">
-
-<nav class="navbar bg-light">
+  <nav class="navbar bg-primary" data-bs-theme="dark">
     <div class="container">
-	  <a class="navbar-brand" href="https://belajarkelompok.github.io/todaybigdata/">
-          <button class="btn btn-outline-primary btn-sm d-inline-flex focus-ring py-1 px-2 text-decoration-none border btn-radius1" type="button">Home
-          </button>  
-        </a>	
-	
-	  <a class="icon-link icon-link-hover right-box" href="mailto:wisatakota19@gmail.com?subject=Saya%20ingin%20Konsultasi%20IT%20%2F%20Internet&body=Materi%3A%0A%0A(1)%20System%2C%0A(2)%20Website%2C%0A(3)%20Android%20App%2C%0A(4)%20Modern%20Web%2C%0A(5)%20Keamanan%20Smartphone%2C%0A(6)%20Keamanan%20Email%2F%20SMS%20%2F%20Telepon%20%2F%20Kamera%20%2F%20GPS%2C%0A(7)%20Keamanan%20Media%20Sosial%2C%0A(8)%20Keamanan%20Aplikasi%20Pembayaran%20Online%20%2F%20Shop%20%2F%20Banking%2C%0A(9)%20Keamanan%20Komputer%2C%0A(10)%20Mencegah%20Hacker%2C%0A(11)%20LAPTOP%20lemot%20(Loading%20nya%20lama%20untuk%20Windows%2010%20dan%20Windows%2011)%0A%0A%0ASaya%20pilih%20nomor%3A%0A%0A%0A%0AThank%20you%20%3A)%0A">
-		  Kirim Email
-		  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-at" viewBox="0 0 16 16">
-  <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2H2Zm3.708 6.208L1 11.105V5.383l4.708 2.825ZM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2-7-4.2Z"/>
-  <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"/>
-</svg>
-		</a>
+      <a class="navbar-brand" href="#">
+        <img src="LOGO.jpg" alt="Ka" width="24" height="24">
+      </a>
+      <a class="navbar-brand" href="#">
+        <img src="20230901_062149_0000.png" alt="TBD" width="24" height="24">
+      </a>
+
+      <span class='d-inline-flex'><span id='text'></span>
+        <div class='console-underscore' id='console'>&#95;</div>
+      </span>
     </div>
   </nav>
 
-  <div class="container">
-    <h1 class="mt-1">Cuaca Hari Ini Cuaca Besok Indonesia</h1>
-	<span class='etitle'><i>Menunggu data cuaca...</i></span>
-	<div style="overflow-x: auto">
-	<div id="myChart" class="mt-3"></div>
-    </div><p>
-	</p>
+    <div class="container p-2 text-center">
+      <div class="row">
+        <div class="col">
+          <h1>Today Big Data</h1>
+        </div>
+        <div class="col" style="border:0px solid black;text-align:left;overflow:hidden;white-space:nowrap;">
+            Today Big Data Indonesia, Data Cuaca BMKG, Data Gempa Bumi BMKG, Data Cuaca BMKG, Data Gempa Bumi BMKG, Data Cuaca BMKG, Data Gempa Bumi BMKG. Activity diagram penjualan online, class diagram toko online, use case diagram toko online, contoh database penjualan baju, contoh penjualan berbasis online, sequence diagram penjualan online.
+         </div> 
+      </div>
+    </div>
+    
+    <div class="container p-2 container2">
 
-  </div>
-</main>
+    <div class="row">
+      
+	  <div class="col-sm-6 mb-3">
+        <div class="card">
+          <div class="card-body">
 
-<footer class="footer mt-auto py-2">
-  <div class="container"> 
-  
-  
-    <span class="footer_speech">Cuaca Hari Ini Cuaca Besok Indonesia. Data oleh</span> <a href="https://data.bmkg.go.id/prakiraan-cuaca/" target="_blank">data.bmkg.go.id</a>  <small><select class="custom-select form-select form-select-sm select-area bg-secondary text-white" id="select-area" style="width:200px;display:inline">
-		  <option value="31.71.01.1001">Gambir</option>
-		  <option value="31.71.01.1002" selected>Cideng</option>
-		  <option value="31.71.01.1003">Petojo Utara</option>
-		  <option value="31.71.01.1004">Petojo Selatan</option>
-		  <option value="31.71.01.1005">Kebon Kelapa</option>
-		  <option value="31.71.01.1006">Duri Pulo</option>
-		  
-		  <!--
-		  <option value="1_2">Kota Jakarta Selatan</option>
-		  <option value="1_3">Kota Jakarta Timur</option>
-		  <option value="1_4">Kota Jakarta Utara</option>
-		  <option value="1_5">Kab. Kepulauan Seribu</option>
-		  
-		  <option value="2_0">Kota Bandung</option>
-		  <option value="2_1">Kota Banjar</option>
-		  <option value="2_2">Kota Bekasi</option>
-		  <option value="2_6">Cikarang</option>
-		  <option value="2_11">Kota Depok</option>
-		  <option value="2_13">Kab. Garut</option>
-		  <option value="2_15">Kab. Karawang</option>
-		  <option value="2_16">Kota Bogor</option>
-		  <option value="2_22">Kab. Purwakarta</option>
-		  <option value="2_26">Kab. Sukabumi</option>
-		  <option value="2_29">Kota Tasikmalaya</option>
-		  
-		  <option value="3_0">Kab. Serang</option>
-		  <option value="3_6">Kota Serang</option>
-		  <option value="3_13">Lebak (Rangkasbitung)</option>
-		  <option value="3_15">Kota Tangerang</option>
-		  
-		  <option value="4_2">Kota Bukittinggi</option>
-		  <option value="4_3">Kab. Agam</option>
-		  <option value="4_6">Kota Padang</option>
-		  <option value="4_8">Kota Padangpanjang</option>
-		  -->
-		</select> 
-		<button type="button" class="btn btn-secondary btn-sm d-inline-flex focus-ring py-1 px-2 text-decoration-none border" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Info: Data yang sudah ditampilkan apa adanya berdasarkan data yang tersedia. Untuk kota-kota lain mungkin nanti ditampilkan.">?</button></small>
-  </div>
-</footer>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5UdaVyDo4v4EDIWB9EhshA?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            
+          </div>
+        </div>
+      </div>
+	  
+	  <div class="col-sm-6 mb-3">
+        <div class="card">
+          <div class="card-body">
 
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4KKTLNb6NMLpVaeH2iMxi4?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            
+          </div>
+        </div>
+      </div>
+	  
+      <div class="col-sm-6 mb-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">INFO GEMPA BUMI - BMKG</h5>
+            <p class="card-text">Today Big Data.</p>
+            <a href="https://todaybigdata.vercel.app/" target="_blank" class="icon-link icon-link-hover" style="--bs-link-hover-color-rgb: 25, 135, 84;">Go to website
+            
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16">
+  <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"/>
+  <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z"/>
+</svg>  
+            </a>
+          </div>
+        </div>
+      </div>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-	
+	<div class="col-sm-6 mb-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">INFO CUACA - BMKG</h5>
+            <p class="card-text">Today Big Data.</p>
+            <a href="https://belajarkelompok.github.io/todaybigdata/cuaca.html" target="_blank" class="icon-link icon-link-hover" style="--bs-link-hover-color-rgb: 25, 135, 84;">Go to website
+            
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16">
+  <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"/>
+  <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z"/>
+</svg>  
+            </a>
+          </div>
+        </div>
+      </div>    
 
-	
-<script>
-var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-  return new bootstrap.Popover(popoverTriggerEl)
-})
+      <div class="col-sm-6 mb-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Konsultasi Gratis <span class="badge bg-secondary">Baru</span></h5>
+            <p class="card-text">Gratis Konsultasi IT / internet 30 menit (online).</p>
 
+            <button class="btn btn-primary d-inline-flex focus-ring py-1 px-2 text-decoration-none border" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+              Lihat Detail
+            </button>
+          
+            <div class="collapse mt-3 mb-3 colla-body" id="collapseExample">
+              <div class="card card-body">
+                Gratis Konsultasi IT / internet 30 menit (online). Jika lebih 30 menit, dikenakan biaya (online / offline) mulai 50 ribu per jam (perorangan), dan mulai 100 ribu per jam (perusahaan).<br /><br />
 
-function getResBmkg(yb) {
+                (1) System <br />
+(2) Website <br />
+(3) Android App <br />
+(4) Modern Web <br />
+(5) Keamanan Smartphone <br />
+(6) Keamanan Email/ SMS / Telepon / Kamera / GPS <br />
+(7) Keamanan Media Sosial <br />
+(8) Keamanan Aplikasi Pembayaran Online / Shop / Banking <br />
+(9) Keamanan Komputer <br />
+(10) Mencegah Hacker <br />
+(11) LAPTOP lemot (Loading nya lama untuk Windows 10 dan Windows 11) <br />
+<br /><br /><br />
+            
+            <a href="mailto:wisatakota19@gmail.com?subject=Saya%20ingin%20Konsultasi%20IT%20%2F%20Internet&body=Materi%3A%0A%0A(1)%20System%2C%0A(2)%20Website%2C%0A(3)%20Android%20App%2C%0A(4)%20Modern%20Web%2C%0A(5)%20Keamanan%20Smartphone%2C%0A(6)%20Keamanan%20Email%2F%20SMS%20%2F%20Telepon%20%2F%20Kamera%20%2F%20GPS%2C%0A(7)%20Keamanan%20Media%20Sosial%2C%0A(8)%20Keamanan%20Aplikasi%20Pembayaran%20Online%20%2F%20Shop%20%2F%20Banking%2C%0A(9)%20Keamanan%20Komputer%2C%0A(10)%20Mencegah%20Hacker%2C%0A(11)%20LAPTOP%20lemot%20(Loading%20nya%20lama%20untuk%20Windows%2010%20dan%20Windows%2011)%0A%0A%0ASaya%20pilih%20nomor%3A%0A%0A%0A%0AThank%20you%20%3A)%0A" target="_blank" class="btn btn-warning focus-ring py-1 px-2 text-decoration-none border">Hubungi Kls
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-at" viewBox="0 0 16 16">
+  <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2H2Zm3.708 6.208L1 11.105V5.383l4.708 2.825ZM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2-7-4.2Z"/>
+  <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"/>
+</svg>
+            </a>
+              </div>
+            </div>
+              
+              
+          </div>
+        </div>
+      </div>
 
-var geturl = yb;
-var covidarray = function () {
-    var tmp = null;
-    $.ajax({
-		async: false,
-        global: false,
-		type: 'GET', 
-		url: geturl, 
-		//data: null, 
-		dataType: 'text',
-		success: function(data) {
-			tmp = JSON.parse(data);
-        }
-	});	
-    return tmp;
-}();
+      
+    </div>
+      
+    </div>
+    
+    <nav class="navbar fixed-bottom footer-nav">
+      <div class="container-fluid">
+        
+        <a class="navbar-brand" href="https://belajarkelompok.github.io/todaybigdata/">
+          <button class="btn btn-primary btn-sm d-inline-flex focus-ring py-1 px-2 text-decoration-none border" type="button">Home
+          </button>  
+        </a>
 
-//console.log(covidarray.data[0].cuaca);
+        <a class="icon-link icon-link-hover" href="mailto:wisatakota19@gmail.com?subject=Saya%20ingin%20Konsultasi%20IT%20%2F%20Internet&body=Materi%3A%0A%0A(1)%20System%2C%0A(2)%20Website%2C%0A(3)%20Android%20App%2C%0A(4)%20Modern%20Web%2C%0A(5)%20Keamanan%20Smartphone%2C%0A(6)%20Keamanan%20Email%2F%20SMS%20%2F%20Telepon%20%2F%20Kamera%20%2F%20GPS%2C%0A(7)%20Keamanan%20Media%20Sosial%2C%0A(8)%20Keamanan%20Aplikasi%20Pembayaran%20Online%20%2F%20Shop%20%2F%20Banking%2C%0A(9)%20Keamanan%20Komputer%2C%0A(10)%20Mencegah%20Hacker%2C%0A(11)%20LAPTOP%20lemot%20(Loading%20nya%20lama%20untuk%20Windows%2010%20dan%20Windows%2011)%0A%0A%0ASaya%20pilih%20nomor%3A%0A%0A%0A%0AThank%20you%20%3A)%0A">
+          Kirim Email
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-at" viewBox="0 0 16 16">
+  <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2H2Zm3.708 6.208L1 11.105V5.383l4.708 2.825ZM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2-7-4.2Z"/>
+  <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"/>
+</svg>
+        </a>
+        
+      </div>
+    </nav>
 
+    <div id="youtube-player">
+      <iframe width="150" src="https://www.youtube.com/embed/videoseries?list=PLC4-y9OFdkinD0QjW2Wi4keFJ6xIb6clY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
 
-if(covidarray==null || covidarray=='') {
-
-	$('#myChart').html('Saat ini data tidak muncul');
-}
-else {	
-	return covidarray;
-}
-}
-
-function generateChartjs(ya,covidarray) {
-	
-	let plain_data = covidarray.data[0].cuaca;
-	let arr_data = [];
-	
-	if(Array.isArray(plain_data) == true ) {
-		for(var i=0; i<plain_data.length; i++) {
-			//console.log(plain_data[i]);
-			
-			if(Array.isArray(plain_data[i]) == true ) {
-				for(var j=0; j<plain_data[i].length; j++) {
-					//console.log(plain_data[i][j]);
-					
-					arr_data.push(plain_data[i][j])
-					
-					
-				}	
-			
-			}
-			
-		}	
-	
-	}
-	
-	console.log(arr_data);
-	
-	var text = '';
-	
-	if(arr_data != null) {
-		var k;
-		for (k = 0; k < arr_data.length; k++) {
-		  //text += arr_data[k].local_datetime + " => " + arr_data[k].image + "<br />";
-		  text += "<div class='row'><div class='col border border-primary'>"+ arr_data[k].local_datetime +"</div> <div class='col border border-primary'><img class='img_cuaca' src ='"+ arr_data[k].image +"' alt='" + arr_data[k].weather_desc + "'/></div> </div>";
-		}
-	
-	}
-	
-	if(text != '') {
-		var etitle= "<strong>" + covidarray.data[0].lokasi.desa + ', ' + covidarray.data[0].lokasi.kecamatan + ', ' +covidarray.data[0].lokasi.kotkab + "</strong>";
-		$('.etitle').html(etitle);
-		
-		$('#myChart').html(text);
-	
-	
-	}
-	
-
-/*
-function cvDate(x) {
-	//2020-04-13T00:00:00Z
-	//2020 04 14 00 00
-	//0123 45 67 89 01
-	x = x.toString();
-	var x1=x.substring(0,4);
-	var x2=x.substring(4,6);
-	var x3=x.substring(6,8);
-	var x4=x.substring(8,10);
-	var x5=x.substring(10,12);
-	var eDate = new Date(x1+'-'+x2+'-'+x3+'T00:00:00Z');
-	console.log(x1+'-'+x2+'-'+x3+'T00:00:00Z');
-	var eDate2 = eDate.toDateString()+' '+x4+':'+x5;
-	if(eDate2.slice(-5) == '00:00') { var eDate3 = 'Pagi'; }
-	else if(eDate2.slice(-5) == '06:00') { var eDate3 = 'Siang'; }
-	else if(eDate2.slice(-5) == '12:00') { var eDate3 = 'Malam'; }
-	else if(eDate2.slice(-5) == '18:00') { var eDate3 = 'Dini hari'; }
-	//Tue Feb 09 2021
-	//0123456789
-	var substr_date = eDate.toDateString().substring(0, 10);
-	return substr_date + ' ' + eDate3;
-}
-
-function cvWht(x) {
-	var cvx = null;
-	switch(x) {
-		case 0: cvx = "Cerah";break;
-		case 1: cvx = "Cerah berawan";break;
-		case 2: cvx = "Cerah berawan";break;
-		case 3: cvx = "Berawan";break;
-		case 4: cvx = "Berawan tebal";break;
-		case 5: cvx = "Kabur";break;
-		case 10: cvx = "Asap";break;
-		case 45: cvx = "Kabut";break;
-		case 60: cvx = "<span class='badge rounded-pill bg-light text-dark'>Hujan ringan</span>";break;
-		case 61: cvx = "<span class='badge rounded-pill bg-warning text-dark'>Hujan sedang</span>";break;
-		case 63: cvx = "<span class='badge rounded-pill bg-warning text-dark'>Hujan lebat</span>";break;
-		case 80: cvx = "<span class='badge rounded-pill bg-warning text-dark'>Hujan lokal</span>";break;
-		case 95: cvx = "<span class='badge rounded-pill bg-danger'>Hujan petir</span>";break;
-		case 97: cvx = "<span class='badge rounded-pill bg-danger'>Hujan petir</span>";break;
-		default:
-		cvx = "Tidak diketahui";
-	}	
-	return cvx;
-}
-
-function cvWindir(x) {
-	var cwd = null;
-	
-	switch(x) {
-		case 'N': cwd = "dari Utara";break;
-		case 'NNE': cwd = "dari Utara-Timur Laut";break;
-		case 'NE': cwd = "dari Timur Laut";break;
-		case 'ENE': cwd = "dari Timur-Timur Laut";break;
-		case 'E': cwd = "dari Timur";break;
-		case 'ESE': cwd = "dari Timur-Tenggara";break;
-		case 'SE': cwd = "dari Tenggara";break;
-		case 'SSE': cwd = "dari Selatan-Tenggara";break;
-		case 'S': cwd = "dari Selatan";break;
-		case 'SSW': cwd = "dari Selatan-Barat Daya";break;
-		case 'SW': cwd = "dari Barat Daya";break;
-		case 'WSW': cwd = "dari Barat-Barat Daya";break;
-		case 'W': cwd = "dari Barat";break;
-		case 'WNW': cwd = "dari Barat-Barat Laut";break;
-		case 'NW': cwd = "dari Barat Laut";break;
-		case 'NNW': cwd = "dari Utara-Barat Laut";break;
-		case 'VARIABLE': cwd = "dari arah berubah-ubah";break;
-		default:
-		cwd = "Tidak diketahui";
-	}	
-	return cwd;
-}
-
-function cvWinsp(x) {
-    if(x < 6) { cws = '<span class="badge bg-primary">Angin tenang</span>';}
-    else if(x < 20) { cws = '<span class="badge bg-primary">Angin pelan</span>';}
-    else if(x < 30) { cws = '<span class="badge bg-secondary">Angin sedang</span>';}
-    else if(x < 40) { cws = '<span class="badge bg-secondary">Angin sejuk</span>';}
-    else if(x < 51) { cws = '<span class="badge bg-danger">Angin kuat</span>';}
-    else if(x < 88) { cws = '<span class="badge bg-danger">Angin kencang</span>';}
-    else if(x < 200) { cws = '<span class="badge bg-dark">Angin badai</span>';}
-    else { cws = '<span class="badge bg-light text-dark">Angin ...</span>';}
-	return cws;
-}
-
-var etitle= covidarray.data.forecast.area[ya].name[1].text;
-$('.etitle').text(etitle);
-
-var trange = null;
-trange = covidarray.data.forecast.area[ya].parameter[5].timerange;
-
-var crange = null;
-crange = covidarray.data.forecast.area[ya].parameter[6].timerange;
-
-var windir = null;
-windir = covidarray.data.forecast.area[ya].parameter[7].timerange;
-
-var winsp = null;
-winsp = covidarray.data.forecast.area[ya].parameter[8].timerange;
-
-var labels = [
-"<span class='badge rounded-pill bg-secondary'>" + cvDate(trange[0].datetime)+"</span> "+cvWht(crange[0].value.text),
-"<span class='badge rounded-pill bg-secondary'>" + cvDate(trange[1].datetime)+"</span> "+cvWht(crange[1].value.text),
-"<span class='badge rounded-pill bg-secondary'>" + cvDate(trange[2].datetime)+"</span> "+cvWht(crange[2].value.text),
-"<span class='badge rounded-pill bg-secondary'>" + cvDate(trange[3].datetime)+"</span> "+cvWht(crange[3].value.text),
-"<span class='badge rounded-pill bg-secondary'>" + cvDate(trange[4].datetime)+"</span> "+cvWht(crange[4].value.text),
-"<span class='badge rounded-pill bg-secondary'>" + cvDate(trange[5].datetime)+"</span> "+cvWht(crange[5].value.text),
-"<span class='badge rounded-pill bg-secondary'>" + cvDate(trange[6].datetime)+"</span> "+cvWht(crange[6].value.text),
-"<span class='badge rounded-pill bg-secondary'>" + cvDate(trange[7].datetime)+"</span> "+cvWht(crange[7].value.text),
-"<span class='badge rounded-pill bg-secondary'>" + cvDate(trange[8].datetime)+"</span> "+cvWht(crange[8].value.text),
-"<span class='badge rounded-pill bg-secondary'>" + cvDate(trange[9].datetime)+"</span> "+cvWht(crange[9].value.text),
-"<span class='badge rounded-pill bg-secondary'>" + cvDate(trange[10].datetime)+"</span> "+cvWht(crange[10].value.text),
-"<span class='badge rounded-pill bg-secondary'>" + cvDate(trange[11].datetime)+"</span> "+cvWht(crange[11].value.text)
-];
-	
-//var data = [1,2,5,1,2,5,1,2,5,4,2,7];  
-
-var data = [
-trange[0].value[0].text,
-trange[1].value[0].text,
-trange[2].value[0].text,
-trange[3].value[0].text,
-trange[4].value[0].text,
-trange[5].value[0].text,
-trange[6].value[0].text,
-trange[7].value[0].text,
-trange[8].value[0].text,
-trange[9].value[0].text,
-trange[10].value[0].text,
-trange[11].value[0].text
-];
-
-var data_windir = [
-cvWindir(windir[0].value[1].text),
-cvWindir(windir[1].value[1].text),
-cvWindir(windir[2].value[1].text),
-cvWindir(windir[3].value[1].text),
-cvWindir(windir[4].value[1].text),
-cvWindir(windir[5].value[1].text),
-cvWindir(windir[6].value[1].text),
-cvWindir(windir[7].value[1].text),
-cvWindir(windir[8].value[1].text),
-cvWindir(windir[9].value[1].text),
-cvWindir(windir[10].value[1].text),
-cvWindir(windir[11].value[1].text)
-];
-
-var data_winsp = [
-cvWinsp(winsp[0].value[0].text),
-cvWinsp(winsp[1].value[0].text),
-cvWinsp(winsp[2].value[0].text),
-cvWinsp(winsp[3].value[0].text),
-cvWinsp(winsp[4].value[0].text),
-cvWinsp(winsp[5].value[0].text),
-cvWinsp(winsp[6].value[0].text),
-cvWinsp(winsp[7].value[0].text),
-cvWinsp(winsp[8].value[0].text),
-cvWinsp(winsp[9].value[0].text),
-cvWinsp(winsp[10].value[0].text),
-cvWinsp(winsp[11].value[0].text)
-];
-
-
-*/
-}
-/* end generate */
-
-$( document ).ready(function() {
-$(function () {
-  $('[data-toggle="popover"]').popover();
-});
-document.getElementById("select-area").selectedIndex = "1"; 
-
-});
-
-var xb = null;
-var cur_sarea=$('.select-area').val();
-
-if(cur_sarea!=null) {
-	var scur_sarea = cur_sarea.substring(0, 14);
-	var yb = 'https://api.bmkg.go.id/publik/prakiraan-cuaca?adm4=' + scur_sarea;
-	var xb = getResBmkg(yb);
-}
-
-
-
-if(xb!=null) {
-	generateChartjs(1,xb);
-}
-
-$(document).on('change', '.select-area', function() {
-	var cur_sarea=$(this).val();
-	//console.log(cur_sarea);
-
-	if(cur_sarea!=null) {
-		var scur_sarea = cur_sarea.substring(0, 14);
-		var yb = 'https://api.bmkg.go.id/publik/prakiraan-cuaca?adm4=' + scur_sarea;
-		var xb = getResBmkg(yb);
-		if(xb != null ) {
-			generateChartjs(1,xb);
-		}
-		else {
-			alert('Data sedang tidak tersedia. Coba lagi nanti...');return false;
-		}
-	}
-	else {
-		alert('Kota belum dipilih...');return false;
-	}
-	
-
-});
+    <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Today Big Data ","url":"https://belajarkelompok.github.io/todaybigdata","logo":"https://belajarkelompok.github.io/todaybigdata/LOGO.jpg","contactPoint":[{"@type":"ContactPoint","telephone":"+62877","contactType":"customer service","availableLanguage":["Bahasa"," English"],"contactOption":[]}],"sameAs":["https://www.youtube.com/channel/UCgjWj6pCjNzV8GzMjhnODmg"]}
 </script>
-	
 
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    
+
+<script>
+  setTimeout(function() { loadText(); }, 5000);
+  
+    function loadText() {
+      /* time */
+      var todayx = new Date();
+      var curHrx = todayx.getHours();
+      
+      if (curHrx < 12) {
+      	var messagesx = ["Good morning", "Ohayogozaimasu", "Joh-eun achim", "Bonjour"];
+      } else if (curHrx < 18) {
+      	var messagesx = ["Good afternoon", "Konnichiwa", "Annyeonghaseyo", "Buon pomeriggio"];
+      } else {
+      	var messagesx = ["Good evening", "Konbanwa", "Annyeonghaseyo", "Bonsoir"];
+      }
+      
+      var comb_ct = messagesx[Math.floor(Math.random() * messagesx.length)]
+      
+      //consoleText([comb_ct, 'Designed', 'by Kls'], 'text',['tomato','tomato','tomato']);
+      consoleText([comb_ct, 'Designed', 'by Kls'], 'text',['white','white','white']);
+  
+        
+  }
+  
+  function consoleText(words, id, colors) {
+  	if (colors === undefined) colors = ['#fff'];
+  	var textvisible = true;
+  	var textcon = document.getElementById('console');
+  	var textLetterCount = 1;
+  	var textx = 1;
+  	var textwaiting = false;
+  	var texttarget = document.getElementById(id)
+  	texttarget.setAttribute('style', 'color:' + colors[0])
+  	window.setInterval(function() {
+  
+  	if (textLetterCount === 0 && textwaiting === false) {
+  	  textwaiting = true;
+  	  texttarget.innerHTML = words[0].substring(0, textLetterCount)
+  	  window.setTimeout(function() {
+  		var usedColor = colors.shift();
+  		colors.push(usedColor);
+  		var usedWord = words.shift();
+  		words.push(usedWord);
+  		textx = 1;
+  		texttarget.setAttribute('style', 'color:' + colors[0])
+  		textLetterCount += textx;
+  		textwaiting = false;
+  	  }, 1000)
+  	} else if (textLetterCount === words[0].length + 1 && textwaiting === false) {
+  	  textwaiting = true;
+  	  window.setTimeout(function() {
+  		textx = -1;
+  		textLetterCount += textx;
+  		textwaiting = false;
+  	  }, 1000)
+  	} else if (textwaiting === false) {
+  	  texttarget.innerHTML = words[0].substring(0, textLetterCount)
+  	  textLetterCount += textx;
+  	}
+  	}, 120)
+  	window.setInterval(function() {
+  	if (textvisible === true) {
+  	  textcon.className = 'console-underscore hidden'
+  	  textvisible = false;
+  
+  	} else {
+  	  textcon.className = 'console-underscore'
+  
+  	  textvisible = true;
+  	}
+  	}, 400)
+  }
+
+  $('#collapseExample').on('shown.bs.collapse', function () {
+      console.log('Hi...');
+      var id = $(this).attr('id');
+      $('html, body').animate({scrollTop: $('#'+id).offset().top + -50}, 1000);
+  });
+</script>    
+    
+  </body>
 </html>
