@@ -120,6 +120,32 @@ canvas,#myChart {
 
 <main role="main" class="flex-shrink-0">
 
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Harga Emas</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+		<div class="mb-1" id="div_widget" align="center"></div>
+		<div class="mb-1" id="div_chart" align="center"></div>
+		<div class="mb-1" id="div_chart_bi" align="center"></div>
+		<div class="mb-1"><span class="badge rounded-pill text-bg-secondary">Embed</span></div>
+		
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-secondary d-inline-flex focus-ring text-decoration-none border" data-bs-dismiss="modal">X</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
 <nav class="navbar bg-light">
     <div class="container">
 	  <a class="navbar-brand" href="https://belajarkelompok.github.io/todaybigdata/">
@@ -878,7 +904,9 @@ canvas,#myChart {
 		  <option value="4_8">Kota Padangpanjang</option>
 		  -->
 		</select> 
-		<button type="button" class="btn btn-secondary btn-sm d-inline-flex focus-ring py-1 px-2 text-decoration-none border" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Info: Data yang sudah ditampilkan apa adanya berdasarkan data yang tersedia. Untuk kota-kota lain mungkin nanti ditampilkan.">?</button></small>
+		<button type="button" class="btn btn-secondary btn-sm d-inline-flex focus-ring py-1 px-2 text-decoration-none border" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Info: Data yang sudah ditampilkan apa adanya berdasarkan data yang tersedia. Untuk kota-kota lain mungkin nanti ditampilkan.">?</button>
+		<button type="button" class="btn btn-warning btn-sm d-inline-flex focus-ring py-1 px-2 text-decoration-none border" data-bs-toggle="modal" data-bs-target="#exampleModal">Emas</button>
+		</small>
   </div>
 </footer>
 
@@ -1114,6 +1142,35 @@ $(document).on('change', '.select-area', function() {
 	
 
 });
+</script>
+
+
+<!-- emas -->
+<script src="https://harga-emas.org/widget/widget.js"></script>
+<script>
+	//emas
+	try {
+		v_widget_type='current_gold_price';
+		v_width=300;
+		v_height=215;
+		he_org_show(v_widget_type,v_width,v_height,'div_widget');
+
+		//chart emas	
+		v_widget_type2="chart_gold_usd";
+		v_period2=51;//hari
+		v_width2=400;
+		v_height2=300;
+		he_org_show_chart(v_widget_type2,v_period2,v_width2,v_height2,'div_chart');
+		
+		v_widget_type3="chart_kurs_bi";
+		v_period3=51;//hari
+		v_width3=400;
+		v_height3=300;
+		he_org_show_chart(v_widget_type3,v_period3,v_width3,v_height3,'div_chart_bi');
+	}
+	catch(err) {
+		document.getElementById("div_widget").innerHTML = "No data on display";
+	}
 </script>
 	
 
