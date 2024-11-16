@@ -110,6 +110,10 @@ canvas,#myChart {
 	height: 51px;
 }
 
+.modalscroll {
+	overflow-x:scroll;
+}
+
 </style>
 	
 </head>
@@ -130,11 +134,12 @@ canvas,#myChart {
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-		<div class="mb-1" id="div_widget" align="center"></div>
-		<div class="mb-1" id="div_chart" align="center"></div>
-		<div class="mb-1" id="div_chart_bi" align="center"></div>
+		<div class="mb-1 modalscroll">
+			<div class="mb-1" id="div_widget" align="center"></div>
+			<div class="mb-1" id="div_chart" align="center"></div>
+			<div class="mb-1" id="div_chart_bi" align="center"></div>
+		</div>
 		<div class="mb-1"><span class="badge rounded-pill text-bg-secondary">Embed</span></div>
-		
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-sm btn-secondary d-inline-flex focus-ring text-decoration-none border" data-bs-dismiss="modal">X</button>
