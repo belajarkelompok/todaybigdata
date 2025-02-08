@@ -114,6 +114,43 @@ canvas,#myChart {
 	overflow-x:scroll;
 }
 
+
+
+#dropdownMenuButton {
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	width: 200px;
+	text-align: left;
+	padding-left: 10px;
+}
+#dropdownSearch {
+	width: 91%;
+}
+.dropdown-menu {
+	width: 100% !important; /* Default: Full width */
+}
+.dropdown-item {
+	width: 100%;
+}
+@media (min-width: 768px) { /* Tablets and larger */
+	.dropdown-menu {
+		width: 50% !important; /* Half width for tablets */
+	}
+}
+@media (min-width: 1024px) { /* Laptops and larger */
+	.dropdown-menu {
+		width: 40% !important; /* Quarter width for laptops and TVs */
+	}
+}
+
+.dropdown-custom {
+	position:static !important;
+}
+		
+    
+
 </style>
 	
 </head>
@@ -177,738 +214,30 @@ canvas,#myChart {
 	</p>
 
   </div>
+  
+  
 </main>
 
 <footer class="footer mt-auto py-2">
   <div class="container"> 
   
   
-    <span class="footer_speech">Cuaca Hari Ini Cuaca Besok Indonesia. Data oleh</span> <a href="https://data.bmkg.go.id/prakiraan-cuaca/" target="_blank">data.bmkg.go.id</a>  <small><select class="custom-select form-select form-select-sm select-area bg-secondary text-white" id="select-area" style="width:200px;display:inline">
-			<option value="13.71.01.1001">Kota Padang - Belakang Pondok</option>
-			<option value="13.71.01.1002">Kota Padang - Alang Laweh</option>
-			<option value="13.71.01.1003">Kota Padang - Ranah Parak Rumbio</option>
-			<option value="13.71.01.1004">Kota Padang - Pasa Gadang</option>
-			<option value="13.71.01.1005">Kota Padang - Batang Arau</option>
-			<option value="13.71.01.1006">Kota Padang - Seberang Palinggam</option>
-			<option value="13.71.01.1007">Kota Padang - Seberang Padang</option>
-			<option value="13.71.01.1008">Kota Padang - Mata Air</option>
-			<option value="13.71.01.1009">Kota Padang - Rawang</option>
-			<option value="13.71.01.1010">Kota Padang - Teluk Bayur</option>
-			<option value="13.71.01.1011">Kota Padang - Air Manis</option>
-			<option value="13.71.01.1012">Kota Padang - Bukit Gado-gado</option>
-
-			<option value="13.71.02.1001">Kota Padang - Sawahan</option>
-			<option value="13.71.02.1002">Kota Padang - Jati Baru</option>
-			<option value="13.71.02.1003">Kota Padang - Jati</option>
-			<option value="13.71.02.1004">Kota Padang - Sawahan Timur</option>
-			<option value="13.71.02.1005">Kota Padang - Simpang Haru</option>
-			<option value="13.71.02.1006">Kota Padang - Kubu Marapalam</option>
-			<option value="13.71.02.1007">Kota Padang - Andalas</option>
-			<option value="13.71.02.1008">Kota Padang - Kubu Dalam Parak Karakah</option>
-			<option value="13.71.02.1009">Kota Padang - Parak Gadang Timur</option>
-			<option value="13.71.02.1010">Kota Padang - Ganting Parak Gadang</option>
-
-			<option value="13.71.03.1001">Kota Padang - Flamboyan Baru</option>
-			<option value="13.71.03.1002">Kota Padang - Rimbo Kaluang</option>
-			<option value="13.71.03.1003">Kota Padang - Ujung Gurun</option>
-			<option value="13.71.03.1004">Kota Padang - Purus</option>
-			<option value="13.71.03.1005">Kota Padang - Padang Pasir</option>
-			<option value="13.71.03.1006">Kota Padang - Olo</option>
-			<option value="13.71.03.1007">Kota Padang - Kampung Jao</option>
-			<option value="13.71.03.1008">Kota Padang - Belakang Tangsi</option>
-			<option value="13.71.03.1009">Kota Padang - Kampung Pondok</option>
-			<option value="13.71.03.1010">Kota Padang - Berok Nipah</option>
-
-			<option value="13.71.04.1001">Kota Padang - Air Tawar Timur</option>
-			<option value="13.71.04.1002">Kota Padang - Air Tawar Barat</option>
-			<option value="13.71.04.1003">Kota Padang - Ulak Karang Utara</option>
-			<option value="13.71.04.1004">Kota Padang - Ulak Karang Selatan</option>
-			<option value="13.71.04.1005">Kota Padang - Lolong Belanti</option>
-			<option value="13.71.04.1006">Kota Padang - Alai Parak Kopi</option>
-			<option value="13.71.04.1007">Kota Padang - Gunung Pangilun</option>
-
-			<option value="13.71.05.1001">Kota Padang - Bungus Timur</option>
-			<option value="13.71.05.1002">Kota Padang - Bungus Barat</option>
-			<option value="13.71.05.1003">Kota Padang - Bungus Selatan</option>
-			<option value="13.71.05.1004">Kota Padang - Teluk Kabung Utara</option>
-			<option value="13.71.05.1005">Kota Padang - Teluk Kabung Tengah</option>
-			<option value="13.71.05.1006">Kota Padang - Teluk Kabung Selatan</option>
-
-			<option value="13.71.06.1001">Kota Padang - Cangkeh Nan XX</option>
-			<option value="13.71.06.1002">Kota Padang - Kampung Baru Nan XX</option>
-			<option value="13.71.06.1003">Kota Padang - Tanah Sirah Piai Nan XX</option>
-			<option value="13.71.06.1004">Kota Padang - Tanjung Saba Pitamen Nan XX</option>
-			<option value="13.71.06.1005">Kota Padang - Lubuk Begalung Nan XX</option>
-			<option value="13.71.06.1006">Kota Padang - Gurun Laweh Nan XX</option>
-			<option value="13.71.06.1007">Kota Padang - Tanjung Aua Nan XX</option>
-			<option value="13.71.06.1008">Kota Padang - Koto Baru Nan XX</option>
-			<option value="13.71.06.1009">Kota Padang - Banuaran Nan XX</option>
-			<option value="13.71.06.1010">Kota Padang - Parak Laweh Pulau Aia Nan XX</option>
-			<option value="13.71.06.1011">Kota Padang - Batung Taba Nan XX</option>
-			<option value="13.71.06.1012">Kota Padang - Pagambiran Ampalu Nan XX</option>
-			<option value="13.71.06.1013">Kota Padang - Pampangan Nan XX</option>
-			<option value="13.71.06.1014">Kota Padang - Gates Nan XX</option>
-			<option value="13.71.06.1015">Kota Padang - Kampung Jua Nan XX</option>
-
-			<option value="13.71.07.1001">Kota Padang - Indarung</option>
-			<option value="13.71.07.1002">Kota Padang - Padang Besi</option>
-			<option value="13.71.07.1003">Kota Padang - Batu Gadang</option>
-			<option value="13.71.07.1004">Kota Padang - Bandar Buat</option>
-			<option value="13.71.07.1005">Kota Padang - Koto Lalang</option>
-			<option value="13.71.07.1006">Kota Padang - Baringin</option>
-			<option value="13.71.07.1007">Kota Padang - Tarantang</option>
-
-			<option value="13.71.08.1001">Kota Padang - Limau Manis</option>
-			<option value="13.71.08.1002">Kota Padang - Koto Lua</option>
-			<option value="13.71.08.1003">Kota Padang - Limau Manis Selatan</option>
-			<option value="13.71.08.1004">Kota Padang - Piai Tangah</option>
-			<option value="13.71.08.1005">Kota Padang - Cupak Tangah</option>
-			<option value="13.71.08.1006">Kota Padang - Pisang</option>
-			<option value="13.71.08.1007">Kota Padang - Binuang Kampuang Dalam</option>
-			<option value="13.71.08.1008">Kota Padang - Kapalo Koto</option>
-			<option value="13.71.08.1009">Kota Padang - Lambung Bukik</option>
-
-			<option value="13.71.09.1001">Kota Padang - Pasar Ambacang</option>
-			<option value="13.71.09.1002">Kota Padang - Anduring</option>
-			<option value="13.71.09.1003">Kota Padang - Lubuk Lintah</option>
-			<option value="13.71.09.1004">Kota Padang - Ampang</option>
-			<option value="13.71.09.1005">Kota Padang - Kalumbuk</option>
-			<option value="13.71.09.1006">Kota Padang - Korong Gadang</option>
-			<option value="13.71.09.1007">Kota Padang - Kuranji</option>
-			<option value="13.71.09.1008">Kota Padang - Gunung Sarik</option>
-			<option value="13.71.09.1009">Kota Padang - Sungai Sapih</option>
-
-			<option value="13.71.10.1001">Kota Padang - Surau Gadang</option>
-			<option value="13.71.10.1002">Kota Padang - Kampung Olo</option>
-			<option value="13.71.10.1003">Kota Padang - Kurao Pagang</option>
-			<option value="13.71.10.1004">Kota Padang - Gurun Laweh</option>
-			<option value="13.71.10.1005">Kota Padang - Tabing Banda Gadang</option>
-			<option value="13.71.10.1006">Kota Padang - Kampung Lapai</option>
-
-			<option value="13.71.11.1001">Kota Padang - Balai Gadang</option>
-			<option value="13.71.11.1002">Kota Padang - Lubuk Minturun</option>
-			<option value="13.71.11.1003">Kota Padang - Aie Pacah</option>
-			<option value="13.71.11.1004">Kota Padang - Dadok Tunggul Hitam</option>
-			<option value="13.71.11.1005">Kota Padang - Koto Panjang Ikua Koto</option>
-			<option value="13.71.11.1006">Kota Padang - Koto Pulai</option>
-			<option value="13.71.11.1007">Kota Padang - Batipuh Panjang</option>
-			<option value="13.71.11.1008">Kota Padang - Padang Sarai</option>
-			<option value="13.71.11.1009">Kota Padang - Lubuk Buaya</option>
-			<option value="13.71.11.1010">Kota Padang - Batang Kabung Ganting</option>
-			<option value="13.71.11.1011">Kota Padang - Bungo Pasang</option>
-			<option value="13.71.11.1012">Kota Padang - Parupuk Tabing</option>
-			<option value="13.71.11.1013">Kota Padang - Pasie Nan Tigo</option>
-
-
-			<option value="13.06.01.2001">Kab Agam - Tiku Selatan</option>
-			<option value="13.06.01.2002">Kab Agam - Tiku Utara</option>
-			<option value="13.06.01.2003">Kab Agam - Tiku Limo Jorong</option>
-
-			<option value="13.06.02.2001">Kab Agam - Lubuk Basung</option>
-			<option value="13.06.02.2002">Kab Agam - Geragahan</option>
-			<option value="13.06.02.2003">Kab Agam - Kampung Pinang</option>
-			<option value="13.06.02.2004">Kab Agam - Kampung Tangah</option>
-			<option value="13.06.02.2005">Kab Agam - Manggopoh</option>
-
-			<option value="13.06.03.2001">Kab Agam - Tanjung Sani</option>
-			<option value="13.06.03.2002">Kab Agam - Sungai Batang</option>
-			<option value="13.06.03.2003">Kab Agam - Maninjau</option>
-			<option value="13.06.03.2004">Kab Agam - Bayua</option>
-			<option value="13.06.03.2006">Kab Agam - Koto Kaciak</option>
-			<option value="13.06.03.2007">Kab Agam - Duo Koto</option>
-			<option value="13.06.03.2008">Kab Agam - Koto Gadang</option>
-			<option value="13.06.03.2009">Kab Agam - Koto Malintang</option>
-			<option value="13.06.03.2010">Kab Agam - Paninjauan</option>
-
-			<option value="13.06.04.2001">Kab Agam - Matua Hilia</option>
-			<option value="13.06.04.2002">Kab Agam - Matua Mudiak</option>
-			<option value="13.06.04.2003">Kab Agam - Tigo Balai</option>
-			<option value="13.06.04.2004">Kab Agam - Lawang</option>
-			<option value="13.06.04.2005">Kab Agam - Parik Panjang</option>
-			<option value="13.06.04.2006">Kab Agam - Panta Pauh</option>
-
-			<option value="13.06.05.2002">Kab Agam - Sungai Landia</option>
-			<option value="13.06.05.2003">Kab Agam - Balingka</option>
-			<option value="13.06.05.2004">Kab Agam - Koto Tuo</option>
-			<option value="13.06.05.2005">Kab Agam - Guguk Tabek Sarajo</option>
-			<option value="13.06.05.2006">Kab Agam - Koto Panjang</option>
-			<option value="13.06.05.2007">Kab Agam - Sianok Anam Suku</option>
-			<option value="13.06.05.2008">Kab Agam - Koto Gadang</option>
-
-			<option value="13.06.06.2001">Kab Agam - Padang Lua</option>
-			<option value="13.06.06.2002">Kab Agam - Taluak Ampek Suku</option>
-			<option value="13.06.06.2003">Kab Agam - Pakan Sinayan</option>
-			<option value="13.06.06.2004">Kab Agam - Kubang Putiah</option>
-			<option value="13.06.06.2005">Kab Agam - Ladang Laweh</option>
-			<option value="13.06.06.2006">Kab Agam - Cingkariang</option>
-			<option value="13.06.06.2007">Kab Agam - Sungai Tanang</option>
-
-			<option value="13.06.07.2001">Kab Agam - Batu Taba</option>
-			<option value="13.06.07.2002">Kab Agam - Biaro Gadang</option>
-			<option value="13.06.07.2003">Kab Agam - Lambah</option>
-			<option value="13.06.07.2004">Kab Agam - Panampung</option>
-			<option value="13.06.07.2005">Kab Agam - Ampang Gadang</option>
-			<option value="13.06.07.2006">Kab Agam - Pasia</option>
-			<option value="13.06.07.2008">Kab Agam - Balai Gurah</option>
-
-			<option value="13.06.08.2001">Kab Agam - Koto Tinggi</option>
-			<option value="13.06.08.2002">Kab Agam - Tabek Panjang</option>
-			<option value="13.06.08.2004">Kab Agam - Simarasok</option>
-			<option value="13.06.08.2005">Kab Agam - Padang Tarok</option>
-			<option value="13.06.08.2006">Kab Agam - Salo</option>
-			<option value="13.06.08.2007">Kab Agam - Koto Baru</option>
-
-			<option value="13.06.09.2001">Kab Agam - Koto Tangah</option>
-			<option value="13.06.09.2003">Kab Agam - Gadut</option>
-			<option value="13.06.09.2004">Kab Agam - Kapau</option>
-
-			<option value="13.06.10.2001">Kab Agam - Koto Rantang</option>
-			<option value="13.06.10.2002">Kab Agam - Pasia Laweh</option>
-			<option value="13.06.10.2003">Kab Agam - Pagadih</option>
-			<option value="13.06.10.2004">Kab Agam - Nan Tujuah</option>
-
-			<option value="13.06.11.2001">Kab Agam - Baringin</option>
-			<option value="13.06.11.2002">Kab Agam - Sipinang</option>
-			<option value="13.06.11.2003">Kab Agam - Sungai Puar</option>
-			<option value="13.06.11.2004">Kab Agam - Ampek Koto Palembayan</option>
-			<option value="13.06.11.2005">Kab Agam - Tigo Koto Silungkang</option>
-			<option value="13.06.11.2006">Kab Agam - Salareh Aia</option>
-
-			<option value="13.06.12.2001">Kab Agam - Padang Laweh</option>
-			<option value="13.06.12.2002">Kab Agam - Sungai Pua</option>
-			<option value="13.06.12.2003">Kab Agam - Batagak</option>
-			<option value="13.06.12.2004">Kab Agam - Batu Palano</option>
-			<option value="13.06.12.2005">Kab Agam - Sariak</option>
-
-			<option value="13.06.13.2001">Kab Agam - Batu Kambing</option>
-			<option value="13.06.13.2002">Kab Agam - Sitalang</option>
-			<option value="13.06.13.2003">Kab Agam - Bawan</option>
-			<option value="13.06.13.2004">Kab Agam - Sitanang</option>
-
-			<option value="13.06.14.2001">Kab Agam - Canduang Koto Laweh</option>
-			<option value="13.06.14.2002">Kab Agam - Lasi</option>
-			<option value="13.06.14.2003">Kab Agam - Bukik Batabuah</option>
-
-			<option value="13.06.15.2001">Kab Agam - Magek</option>
-			<option value="13.06.15.2002">Kab Agam - Kamang Hilia</option>
-			<option value="13.06.15.2003">Kab Agam - Kamang Mudiak</option>
-
-			<option value="13.06.16.2001">Kab Agam - Malalak Utara</option>
-			<option value="13.06.16.2002">Kab Agam - Malalak Timur</option>
-			<option value="13.06.16.2003">Kab Agam - Malalak Selatan</option>
-			<option value="13.06.16.2004">Kab Agam - Malalak Barat</option>
-
-
-			<option value="13.74.01.1001">Kota Padang Panjang - Ganting</option>
-			<option value="13.74.01.1002">Kota Padang Panjang - Sigando</option>
-			<option value="13.74.01.1003">Kota Padang Panjang - Ekor Lubuk</option>
-			<option value="13.74.01.1004">Kota Padang Panjang - Ngalau</option>
-			<option value="13.74.01.1005">Kota Padang Panjang - Guguk Malintang</option>
-			<option value="13.74.01.1006">Kota Padang Panjang - Koto Panjang</option>
-			<option value="13.74.01.1007">Kota Padang Panjang - Koto Katik</option>
-			<option value="13.74.01.1008">Kota Padang Panjang - Tanah Pak Lambik</option>
-
-			<option value="13.74.02.1001">Kota Padang Panjang - Bukit Surungan</option>
-			<option value="13.74.02.1002">Kota Padang Panjang - Pasar Usang</option>
-			<option value="13.74.02.1003">Kota Padang Panjang - Kampung Manggis</option>
-			<option value="13.74.02.1004">Kota Padang Panjang - Silaing Bawah</option>
-			<option value="13.74.02.1005">Kota Padang Panjang - Silaing Atas</option>
-			<option value="13.74.02.1006">Kota Padang Panjang - Pasar Baru</option>
-			<option value="13.74.02.1007">Kota Padang Panjang - Tanah Hitam</option>
-			<option value="13.74.02.1008">Kota Padang Panjang - Balai-balai</option>
-
-
-			<option value="13.75.01.1001">Kota Bukittinggi - Tarok Dipo</option>
-			<option value="13.75.01.1002">Kota Bukittinggi - Bukik Cangang/Kayu Rmg.</option>
-			<option value="13.75.01.1003">Kota Bukittinggi - Pakan Kurai</option>
-			<option value="13.75.01.1004">Kota Bukittinggi - Aur Tajungkang/Tgh. Sawah</option>
-			<option value="13.75.01.1005">Kota Bukittinggi - Benteng Pasar Atas</option>
-			<option value="13.75.01.1006">Kota Bukittinggi - Kayu Kubu</option>
-			<option value="13.75.01.1007">Kota Bukittinggi - Bukik Apik Puhun</option>
-
-			<option value="13.75.02.1001">Kota Bukittinggi - Campago Guguk Bulek</option>
-			<option value="13.75.02.1002">Kota Bukittinggi - Campago Ipuh</option>
-			<option value="13.75.02.1003">Kota Bukittinggi - Puhun Tembok</option>
-			<option value="13.75.02.1004">Kota Bukittinggi - Kubu Gulai Bancah</option>
-			<option value="13.75.02.1005">Kota Bukittinggi - Puhun Pintu Kabun</option>
-			<option value="13.75.02.1006">Kota Bukittinggi - Pulai Anak Air</option>
-			<option value="13.75.02.1007">Kota Bukittinggi - Koto Selayan</option>
-			<option value="13.75.02.1008">Kota Bukittinggi - Garegeh</option>
-			<option value="13.75.02.1009">Kota Bukittinggi - Manggis/Ganting</option>
-
-			<option value="13.75.03.1001">Kota Bukittinggi - Aur Kuning</option>
-			<option value="13.75.03.1002">Kota Bukittinggi - Birugo</option>
-			<option value="13.75.03.1003">Kota Bukittinggi - Belakang Balok</option>
-			<option value="13.75.03.1004">Kota Bukittinggi - Sapiran</option>
-			<option value="13.75.03.1005">Kota Bukittinggi - Kubu Tanjung</option>
-			<option value="13.75.03.1006">Kota Bukittinggi - Pakan Labuh</option>
-			<option value="13.75.03.1007">Kota Bukittinggi - Parit Rantang</option>
-			<option value="13.75.03.1008">Kota Bukittinggi - Ladang Cakiah</option>
-
-
-
-			<option value="31.01.01.1001">Jakarta - Pulau Panggang</option>
-			<option value="31.01.01.1002">Jakarta - Pulau Kelapa</option>
-			<option value="31.01.01.1003">Jakarta - Pulau Harapan</option>
-
-			<option value="31.01.02.1001">Jakarta - Pulau Untung Jawa</option>
-			<option value="31.01.02.1002">Jakarta - Pulau Tidung</option>
-			<option value="31.01.02.1003">Jakarta - Pulau Pari</option>
-
-
-			<option value="31.71.01.1001" selected>Jakarta - Gambir</option>
-			<option value="31.71.01.1002">Jakarta - Cideng</option>
-			<option value="31.71.01.1003">Jakarta - Petojo Utara</option>
-			<option value="31.71.01.1004">Jakarta - Petojo Selatan</option>
-			<option value="31.71.01.1005">Jakarta - Kebon Kelapa</option>
-			<option value="31.71.01.1006">Jakarta - Duri Pulo</option>
-
-			<option value="31.71.02.1001">Jakarta - Pasar Baru</option>
-			<option value="31.71.02.1002">Jakarta - Karang Anyar</option>
-			<option value="31.71.02.1003">Jakarta - Kartini</option>
-			<option value="31.71.02.1004">Jakarta - Gunung Sahari Utara</option>
-			<option value="31.71.02.1005">Jakarta - Mangga Dua Selatan</option>
-
-			<option value="31.71.03.1001">Jakarta - Kemayoran</option>
-			<option value="31.71.03.1002">Jakarta - Kebon Kosong</option>
-			<option value="31.71.03.1003">Jakarta - Harapan Mulia</option>
-			<option value="31.71.03.1004">Jakarta - Serdang</option>
-			<option value="31.71.03.1005">Jakarta - Gunung Sahari Selatan</option>
-			<option value="31.71.03.1006">Jakarta - Cempaka Baru</option>
-			<option value="31.71.03.1007">Jakarta - Sumur Batu</option>
-			<option value="31.71.03.1008">Jakarta - Utan Panjang</option>
-
-			<option value="31.71.04.1001">Jakarta - Senen</option>
-			<option value="31.71.04.1002">Jakarta - Kenari</option>
-			<option value="31.71.04.1003">Jakarta - Paseban</option>
-			<option value="31.71.04.1004">Jakarta - Kramat</option>
-			<option value="31.71.04.1005">Jakarta - Kwitang</option>
-			<option value="31.71.04.1006">Jakarta - Bungur</option>
-
-			<option value="31.71.05.1001">Jakarta - Cempaka Putih Timur</option>
-			<option value="31.71.05.1002">Jakarta - Cempaka Putih Barat</option>
-			<option value="31.71.05.1003">Jakarta - Rawasari</option>
-
-			<option value="31.71.06.1001">Jakarta - Menteng</option>
-			<option value="31.71.06.1002">Jakarta - Pegangsaan</option>
-			<option value="31.71.06.1003">Jakarta - Cikini</option>
-			<option value="31.71.06.1004">Jakarta - Gondangdia</option>
-			<option value="31.71.06.1005">Jakarta - Kebon Sirih</option>
-
-			<option value="31.71.07.1001">Jakarta - Gelora</option>
-			<option value="31.71.07.1002">Jakarta - Bendungan Hilir</option>
-			<option value="31.71.07.1003">Jakarta - Karet Tengsin</option>
-			<option value="31.71.07.1004">Jakarta - Petamburan</option>
-			<option value="31.71.07.1005">Jakarta - Kebon Melati</option>
-			<option value="31.71.07.1006">Jakarta - Kebon Kacang</option>
-			<option value="31.71.07.1007">Jakarta - Kampung Bali</option>
-
-			<option value="31.71.08.1001">Jakarta - Johar Baru</option>
-			<option value="31.71.08.1002">Jakarta - Kampung Rawa</option>
-			<option value="31.71.08.1003">Jakarta - Galur</option>
-			<option value="31.71.08.1004">Jakarta - Tanah Tinggi</option>
-
-
-			<option value="31.72.01.1001">Jakarta - Penjaringan</option>
-			<option value="31.72.01.1002">Jakarta - Kamal Muara</option>
-			<option value="31.72.01.1003">Jakarta - Kapuk Muara</option>
-			<option value="31.72.01.1004">Jakarta - Pejagalan</option>
-			<option value="31.72.01.1005">Jakarta - Pluit</option>
-
-			<option value="31.72.02.1001">Jakarta - Tanjung Priok</option>
-			<option value="31.72.02.1002">Jakarta - Sunter Jaya</option>
-			<option value="31.72.02.1003">Jakarta - Papanggo</option>
-			<option value="31.72.02.1004">Jakarta - Sungai Bambu</option>
-			<option value="31.72.02.1005">Jakarta - Kebon Bawang</option>
-			<option value="31.72.02.1006">Jakarta - Sunter Agung</option>
-			<option value="31.72.02.1007">Jakarta - Warakas</option>
-
-			<option value="31.72.03.1001">Jakarta - Koja</option>
-			<option value="31.72.03.1002">Jakarta - Tugu Utara</option>
-			<option value="31.72.03.1003">Jakarta - Lagoa</option>
-			<option value="31.72.03.1004">Jakarta - Rawa Badak Utara</option>
-			<option value="31.72.03.1005">Jakarta - Tugu Selatan</option>
-			<option value="31.72.03.1006">Jakarta - Rawa Badak Selatan</option>
-
-			<option value="31.72.04.1001">Jakarta - Cilincing</option>
-			<option value="31.72.04.1002">Jakarta - Sukapura</option>
-			<option value="31.72.04.1003">Jakarta - Marunda</option>
-			<option value="31.72.04.1004">Jakarta - Kalibaru</option>
-			<option value="31.72.04.1005">Jakarta - Semper Timur</option>
-			<option value="31.72.04.1006">Jakarta - Rorotan</option>
-			<option value="31.72.04.1007">Jakarta - Semper Barat</option>
-
-			<option value="31.72.05.1001">Jakarta - Pademangan Timur</option>
-			<option value="31.72.05.1002">Jakarta - Pademangan Barat</option>
-			<option value="31.72.05.1003">Jakarta - Ancol</option>
-
-			<option value="31.72.06.1001">Jakarta - Kelapa Gading Timur</option>
-			<option value="31.72.06.1002">Jakarta - Pegangsaan Dua</option>
-			<option value="31.72.06.1003">Jakarta - Kelapa Gading Barat</option>
-
-
-			<option value="31.73.01.1001">Jakarta - Cengkareng Barat</option>
-			<option value="31.73.01.1002">Jakarta - Duri Kosambi</option>
-			<option value="31.73.01.1003">Jakarta - Rawa Buaya</option>
-			<option value="31.73.01.1004">Jakarta - Kedaung Kali Angke</option>
-			<option value="31.73.01.1005">Jakarta - Kapuk</option>
-			<option value="31.73.01.1006">Jakarta - Cengkareng Timur</option>
-
-			<option value="31.73.02.1001">Jakarta - Grogol</option>
-			<option value="31.73.02.1002">Jakarta - Tanjung Duren Utara</option>
-			<option value="31.73.02.1003">Jakarta - Tomang</option>
-			<option value="31.73.02.1004">Jakarta - Jelambar</option>
-			<option value="31.73.02.1005">Jakarta - Tanjung Duren Selatan</option>
-			<option value="31.73.02.1006">Jakarta - Jelambar Baru</option>
-			<option value="31.73.02.1007">Jakarta - Wijaya Kusuma</option>
-
-			<option value="31.73.03.1001">Jakarta - Taman Sari</option>
-			<option value="31.73.03.1002">Jakarta - Krukut</option>
-			<option value="31.73.03.1003">Jakarta - Maphar</option>
-			<option value="31.73.03.1004">Jakarta - Tangki</option>
-			<option value="31.73.03.1005">Jakarta - Mangga Besar</option>
-			<option value="31.73.03.1006">Jakarta - Keagungan</option>
-			<option value="31.73.03.1007">Jakarta - Glodok</option>
-			<option value="31.73.03.1008">Jakarta - Pinangsia</option>
-
-			<option value="31.73.04.1001">Jakarta - Tambora</option>
-			<option value="31.73.04.1002">Jakarta - Kali Anyar</option>
-			<option value="31.73.04.1003">Jakarta - Duri Utara</option>
-			<option value="31.73.04.1004">Jakarta - Tanah Sereal</option>
-			<option value="31.73.04.1005">Jakarta - Krendang</option>
-			<option value="31.73.04.1006">Jakarta - Jembatan Besi</option>
-			<option value="31.73.04.1007">Jakarta - Angke</option>
-			<option value="31.73.04.1008">Jakarta - Jembatan Lima</option>
-			<option value="31.73.04.1009">Jakarta - Pekojan</option>
-			<option value="31.73.04.1010">Jakarta - Roa Malaka</option>
-			<option value="31.73.04.1011">Jakarta - Duri Selatan</option>
-
-			<option value="31.73.05.1001">Jakarta - Kebon Jeruk</option>
-			<option value="31.73.05.1002">Jakarta - Sukabumi Utara</option>
-			<option value="31.73.05.1003">Jakarta - Sukabumi Selatan</option>
-			<option value="31.73.05.1004">Jakarta - Kelapa Dua</option>
-			<option value="31.73.05.1005">Jakarta - Duri Kepa</option>
-			<option value="31.73.05.1006">Jakarta - Kedoya Utara</option>
-			<option value="31.73.05.1007">Jakarta - Kedoya Selatan</option>
-
-			<option value="31.73.06.1001">Jakarta - Kalideres</option>
-			<option value="31.73.06.1002">Jakarta - Semanan</option>
-			<option value="31.73.06.1003">Jakarta - Tegal Alur</option>
-			<option value="31.73.06.1004">Jakarta - Kamal</option>
-			<option value="31.73.06.1005">Jakarta - Pegadungan</option>
-
-			<option value="31.73.07.1001">Jakarta - Palmerah</option>
-			<option value="31.73.07.1002">Jakarta - Slipi</option>
-			<option value="31.73.07.1003">Jakarta - Kota Bambu Utara</option>
-			<option value="31.73.07.1004">Jakarta - Jatipulo</option>
-			<option value="31.73.07.1005">Jakarta - Kemanggisan</option>
-			<option value="31.73.07.1006">Jakarta - Kota Bambu Selatan</option>
-
-			<option value="31.73.08.1001">Jakarta - Kembangan Utara</option>
-			<option value="31.73.08.1002">Jakarta - Meruya Utara</option>
-			<option value="31.73.08.1003">Jakarta - Meruya Selatan</option>
-			<option value="31.73.08.1004">Jakarta - Srengseng</option>
-			<option value="31.73.08.1005">Jakarta - Joglo</option>
-			<option value="31.73.08.1006">Jakarta - Kembangan Selatan</option>
-
-
-			<option value="31.74.01.1001">Jakarta - Tebet Timur</option>
-			<option value="31.74.01.1002">Jakarta - Tebet Barat</option>
-			<option value="31.74.01.1003">Jakarta - Menteng Dalam</option>
-			<option value="31.74.01.1004">Jakarta - Kebon Baru</option>
-			<option value="31.74.01.1005">Jakarta - Bukit Duri</option>
-			<option value="31.74.01.1006">Jakarta - Manggarai Selatan</option>
-			<option value="31.74.01.1007">Jakarta - Manggarai</option>
-
-			<option value="31.74.02.1001">Jakarta - Setia Budi</option>
-			<option value="31.74.02.1002">Jakarta - Karet Semanggi</option>
-			<option value="31.74.02.1003">Jakarta - Karet Kuningan</option>
-			<option value="31.74.02.1004">Jakarta - Karet</option>
-			<option value="31.74.02.1005">Jakarta - Menteng Atas</option>
-			<option value="31.74.02.1006">Jakarta - Pasar Manggis</option>
-			<option value="31.74.02.1007">Jakarta - Guntur</option>
-			<option value="31.74.02.1008">Jakarta - Kuningan Timur</option>
-
-			<option value="31.74.03.1001">Jakarta - Mampang Prapatan</option>
-			<option value="31.74.03.1002">Jakarta - Bangka</option>
-			<option value="31.74.03.1003">Jakarta - Pela Mampang</option>
-			<option value="31.74.03.1004">Jakarta - Tegal Parang</option>
-			<option value="31.74.03.1005">Jakarta - Kuningan Barat</option>
-
-			<option value="31.74.04.1001">Jakarta - Pasar Minggu</option>
-			<option value="31.74.04.1002">Jakarta - Jati Padang</option>
-			<option value="31.74.04.1003">Jakarta - Cilandak Timur</option>
-			<option value="31.74.04.1004">Jakarta - Ragunan</option>
-			<option value="31.74.04.1005">Jakarta - Pejaten Timur</option>
-			<option value="31.74.04.1006">Jakarta - Pejaten Barat</option>
-			<option value="31.74.04.1007">Jakarta - Kebagusan</option>
-
-			<option value="31.74.05.1001">Jakarta - Kebayoran Lama Utara</option>
-			<option value="31.74.05.1002">Jakarta - Pondok Pinang</option>
-			<option value="31.74.05.1003">Jakarta - Cipulir</option>
-			<option value="31.74.05.1004">Jakarta - Grogol Utara</option>
-			<option value="31.74.05.1005">Jakarta - Grogol Selatan</option>
-			<option value="31.74.05.1006">Jakarta - Kebayoran Lama Selatan</option>
-
-			<option value="31.74.06.1001">Jakarta - Cilandak Barat</option>
-			<option value="31.74.06.1002">Jakarta - Lebak Bulus</option>
-			<option value="31.74.06.1003">Jakarta - Pondok Labu</option>
-			<option value="31.74.06.1004">Jakarta - Gandaria Selatan</option>
-			<option value="31.74.06.1005">Jakarta - Cipete Selatan</option>
-
-			<option value="31.74.07.1001">Jakarta - Melawai</option>
-			<option value="31.74.07.1002">Jakarta - Gunung</option>
-			<option value="31.74.07.1003">Jakarta - Kramat Pela</option>
-			<option value="31.74.07.1004">Jakarta - Selong</option>
-			<option value="31.74.07.1005">Jakarta - Rawa Barat</option>
-			<option value="31.74.07.1006">Jakarta - Senayan</option>
-			<option value="31.74.07.1007">Jakarta - Pulo</option>
-			<option value="31.74.07.1008">Jakarta - Petogogan</option>
-			<option value="31.74.07.1009">Jakarta - Gandaria Utara</option>
-			<option value="31.74.07.1010">Jakarta - Cipete Utara</option>
-
-			<option value="31.74.08.1001">Jakarta - Pancoran</option>
-			<option value="31.74.08.1002">Jakarta - Kalibata</option>
-			<option value="31.74.08.1003">Jakarta - Rawajati</option>
-			<option value="31.74.08.1004">Jakarta - Duren Tiga</option>
-			<option value="31.74.08.1005">Jakarta - Pengadegan</option>
-			<option value="31.74.08.1006">Jakarta - Cikoko</option>
-
-			<option value="31.74.09.1001">Jakarta - Jagakarsa</option>
-			<option value="31.74.09.1002">Jakarta - Srengseng Sawah</option>
-			<option value="31.74.09.1003">Jakarta - Ciganjur</option>
-			<option value="31.74.09.1004">Jakarta - Lenteng Agung</option>
-			<option value="31.74.09.1005">Jakarta - Tanjung Barat</option>
-			<option value="31.74.09.1006">Jakarta - Cipedak</option>
-
-			<option value="31.74.10.1001">Jakarta - Pesanggrahan</option>
-			<option value="31.74.10.1002">Jakarta - Bintaro</option>
-			<option value="31.74.10.1003">Jakarta - Petukangan Utara</option>
-			<option value="31.74.10.1004">Jakarta - Petukangan Selatan</option>
-			<option value="31.74.10.1005">Jakarta - Ulujami</option>
-
-
-			<option value="31.75.01.1001">Jakarta - Pisangan Baru</option>
-			<option value="31.75.01.1002">Jakarta - Utan Kayu Utara</option>
-			<option value="31.75.01.1003">Jakarta - Kayu Manis</option>
-			<option value="31.75.01.1004">Jakarta - Palmeriam</option>
-			<option value="31.75.01.1005">Jakarta - Kebon Manggis</option>
-			<option value="31.75.01.1006">Jakarta - Utan Kayu Selatan</option>
-
-			<option value="31.75.02.1001">Jakarta - Pulo Gadung</option>
-			<option value="31.75.02.1002">Jakarta - Pisangan Timur</option>
-			<option value="31.75.02.1003">Jakarta - Cipinang</option>
-			<option value="31.75.02.1004">Jakarta - Jatinegara Kaum</option>
-			<option value="31.75.02.1005">Jakarta - Rawamangun</option>
-			<option value="31.75.02.1006">Jakarta - Kayu Putih</option>
-			<option value="31.75.02.1007">Jakarta - Jati</option>
-
-			<option value="31.75.03.1001">Jakarta - Kampung Melayu</option>
-			<option value="31.75.03.1002">Jakarta - Bidara Cina</option>
-			<option value="31.75.03.1003">Jakarta - Bali Mester</option>
-			<option value="31.75.03.1004">Jakarta - Rawa Bunga</option>
-			<option value="31.75.03.1005">Jakarta - Cipinang Cempedak</option>
-			<option value="31.75.03.1006">Jakarta - Cipinang Muara</option>
-			<option value="31.75.03.1007">Jakarta - Cipinang Besar Selatan</option>
-			<option value="31.75.03.1008">Jakarta - Cipinang Besar Utara</option>
-
-			<option value="31.75.04.1001">Jakarta - Kramatjati</option>
-			<option value="31.75.04.1002">Jakarta - Tengah</option>
-			<option value="31.75.04.1003">Jakarta - Dukuh</option>
-			<option value="31.75.04.1004">Jakarta - Batu Ampar</option>
-			<option value="31.75.04.1005">Jakarta - Balekambang</option>
-			<option value="31.75.04.1006">Jakarta - Cililitan</option>
-			<option value="31.75.04.1007">Jakarta - Cawang</option>
-
-			<option value="31.75.05.1001">Jakarta - Gedong</option>
-			<option value="31.75.05.1002">Jakarta - Baru</option>
-			<option value="31.75.05.1003">Jakarta - Cijantung</option>
-			<option value="31.75.05.1004">Jakarta - Kalisari</option>
-			<option value="31.75.05.1005">Jakarta - Pekayon</option>
-
-			<option value="31.75.06.1001">Jakarta - Jatinegara</option>
-			<option value="31.75.06.1002">Jakarta - Rawa Terate</option>
-			<option value="31.75.06.1003">Jakarta - Penggilingan</option>
-			<option value="31.75.06.1004">Jakarta - Cakung Timur</option>
-			<option value="31.75.06.1005">Jakarta - Pulo Gebang</option>
-			<option value="31.75.06.1006">Jakarta - Ujung Menteng</option>
-			<option value="31.75.06.1007">Jakarta - Cakung Barat</option>
-
-			<option value="31.75.07.1001">Jakarta - Duren Sawit</option>
-			<option value="31.75.07.1002">Jakarta - Pondok Bambu</option>
-			<option value="31.75.07.1003">Jakarta - Klender</option>
-			<option value="31.75.07.1004">Jakarta - Pondok Kelapa</option>
-			<option value="31.75.07.1005">Jakarta - Malaka Sari</option>
-			<option value="31.75.07.1006">Jakarta - Malaka Jaya</option>
-			<option value="31.75.07.1007">Jakarta - Pondok Kopi</option>
-
-			<option value="31.75.08.1001">Jakarta - Makasar</option>
-			<option value="31.75.08.1002">Jakarta - Pinangranti</option>
-			<option value="31.75.08.1003">Jakarta - Kebon Pala</option>
-			<option value="31.75.08.1004">Jakarta - Halim Perdana Kusuma</option>
-			<option value="31.75.08.1005">Jakarta - Cipinang Melayu</option>
-
-			<option value="31.75.09.1001">Jakarta - Ciracas</option>
-			<option value="31.75.09.1002">Jakarta - Cibubur</option>
-			<option value="31.75.09.1003">Jakarta - Kelapa Dua Wetan</option>
-			<option value="31.75.09.1004">Jakarta - Susukan</option>
-			<option value="31.75.09.1005">Jakarta - Rambutan</option>
-
-			<option value="31.75.10.1001">Jakarta - Cipayung</option>
-			<option value="31.75.10.1002">Jakarta - Cilangkap</option>
-			<option value="31.75.10.1003">Jakarta - Pondok Ranggon</option>
-			<option value="31.75.10.1004">Jakarta - Munjul</option>
-			<option value="31.75.10.1005">Jakarta - Setu</option>
-			<option value="31.75.10.1006">Jakarta - Bambu Apus</option>
-			<option value="31.75.10.1007">Jakarta - Lubang Buaya</option>
-			<option value="31.75.10.1008">Jakarta - Ceger</option>
-
-
-			<option value="32.71.01.1001">Kota Bogor - Batu Tulis</option>
-			<option value="32.71.01.1002">Kota Bogor - Bondongan</option>
-			<option value="32.71.01.1003">Kota Bogor - Empang</option>
-			<option value="32.71.01.1004">Kota Bogor - Lawanggintung</option>
-			<option value="32.71.01.1005">Kota Bogor - Pamoyanan</option>
-			<option value="32.71.01.1006">Kota Bogor - Ranggamekar</option>
-			<option value="32.71.01.1007">Kota Bogor - Mulyaharja</option>
-			<option value="32.71.01.1008">Kota Bogor - Cikaret</option>
-			<option value="32.71.01.1009">Kota Bogor - Bojongkerta</option>
-			<option value="32.71.01.1010">Kota Bogor - Rancamaya</option>
-			<option value="32.71.01.1011">Kota Bogor - Kertamaya</option>
-			<option value="32.71.01.1012">Kota Bogor - Harjasari</option>
-			<option value="32.71.01.1013">Kota Bogor - Muarasari</option>
-			<option value="32.71.01.1014">Kota Bogor - Genteng</option>
-			<option value="32.71.01.1015">Kota Bogor - Pakuan</option>
-			<option value="32.71.01.1016">Kota Bogor - Cipaku</option>
-
-			<option value="32.71.02.1001">Kota Bogor - Sukasari</option>
-			<option value="32.71.02.1002">Kota Bogor - Baranangsiang</option>
-			<option value="32.71.02.1003">Kota Bogor - Katulampa</option>
-			<option value="32.71.02.1004">Kota Bogor - Sindangsari</option>
-			<option value="32.71.02.1005">Kota Bogor - Sindangrasa</option>
-			<option value="32.71.02.1006">Kota Bogor - Tajur</option>
-
-			<option value="32.71.03.1001">Kota Bogor - Gudang</option>
-			<option value="32.71.03.1002">Kota Bogor - Paledang</option>
-			<option value="32.71.03.1003">Kota Bogor - Pabaton</option>
-			<option value="32.71.03.1004">Kota Bogor - Cibogor</option>
-			<option value="32.71.03.1005">Kota Bogor - Babakan</option>
-			<option value="32.71.03.1006">Kota Bogor - Sempur</option>
-			<option value="32.71.03.1007">Kota Bogor - Tegallega</option>
-			<option value="32.71.03.1008">Kota Bogor - Babakan Pasar</option>
-			<option value="32.71.03.1009">Kota Bogor - Panaragan</option>
-			<option value="32.71.03.1010">Kota Bogor - Ciwaringin</option>
-			<option value="32.71.03.1011">Kota Bogor - Kebon Kalapa</option>
-
-			<option value="32.71.04.1001">Kota Bogor - Menteng</option>
-			<option value="32.71.04.1002">Kota Bogor - Sindang Barang</option>
-			<option value="32.71.04.1003">Kota Bogor - Bubulak</option>
-			<option value="32.71.04.1004">Kota Bogor - Margajaya</option>
-			<option value="32.71.04.1005">Kota Bogor - Balumbang Jaya</option>
-			<option value="32.71.04.1006">Kota Bogor - Situ Gede</option>
-			<option value="32.71.04.1007">Kota Bogor - Semplak</option>
-			<option value="32.71.04.1008">Kota Bogor - Cilendek Barat</option>
-			<option value="32.71.04.1009">Kota Bogor - Cilendek Timur</option>
-			<option value="32.71.04.1010">Kota Bogor - Curug Mekar</option>
-			<option value="32.71.04.1011">Kota Bogor - Curug</option>
-			<option value="32.71.04.1012">Kota Bogor - Pasir Jaya</option>
-			<option value="32.71.04.1013">Kota Bogor - Pasir Kuda</option>
-			<option value="32.71.04.1014">Kota Bogor - Pasir Mulya</option>
-			<option value="32.71.04.1015">Kota Bogor - Gunung Batu</option>
-			<option value="32.71.04.1016">Kota Bogor - Loji</option>
-
-			<option value="32.71.05.1001">Kota Bogor - Bantarjati</option>
-			<option value="32.71.05.1002">Kota Bogor - Tegal Gundil</option>
-			<option value="32.71.05.1003">Kota Bogor - Kedung Halang</option>
-			<option value="32.71.05.1004">Kota Bogor - Ciparigi</option>
-			<option value="32.71.05.1005">Kota Bogor - Cibuluh</option>
-			<option value="32.71.05.1006">Kota Bogor - Ciluar</option>
-			<option value="32.71.05.1007">Kota Bogor - Tanah Baru</option>
-			<option value="32.71.05.1008">Kota Bogor - Cimahpar</option>
-
-			<option value="32.71.06.1001">Kota Bogor - Tanah Sareal</option>
-			<option value="32.71.06.1002">Kota Bogor - Kebon Pedes</option>
-			<option value="32.71.06.1003">Kota Bogor - Kedung Badak</option>
-			<option value="32.71.06.1004">Kota Bogor - Sukaresmi</option>
-			<option value="32.71.06.1005">Kota Bogor - Kedung Waringin</option>
-			<option value="32.71.06.1006">Kota Bogor - Kedung Jaya</option>
-			<option value="32.71.06.1007">Kota Bogor - Sukadamai</option>
-			<option value="32.71.06.1008">Kota Bogor - Mekar Wangi</option>
-			<option value="32.71.06.1009">Kota Bogor - Kencana</option>
-			<option value="32.71.06.1010">Kota Bogor - Kayu Manis</option>
-			<option value="32.71.06.1011">Kota Bogor - Cibadak</option>
-
-
-			<option value="32.72.01.1001">Kota Bogor - Gunung Puyuh</option>
-			<option value="32.72.01.1002">Kota Bogor - Karamat</option>
-			<option value="32.72.01.1003">Kota Bogor - Sriwidari</option>
-			<option value="32.72.01.1004">Kota Bogor - Karang Tengah</option>
-
-			<option value="32.72.02.1001">Kota Bogor - Cikole</option>
-			<option value="32.72.02.1002">Kota Bogor - Selabatu</option>
-			<option value="32.72.02.1003">Kota Bogor - Gunungparang</option>
-			<option value="32.72.02.1004">Kota Bogor - Kebonjati</option>
-			<option value="32.72.02.1005">Kota Bogor - Cisarua</option>
-			<option value="32.72.02.1006">Kota Bogor - Subangjaya</option>
-
-			<option value="32.72.03.1001">Kota Bogor - Citamiang</option>
-			<option value="32.72.03.1002">Kota Bogor - Tipar</option>
-			<option value="32.72.03.1003">Kota Bogor - Nanggeleng</option>
-			<option value="32.72.03.1004">Kota Bogor - Gedongpanjang</option>
-			<option value="32.72.03.1005">Kota Bogor - Cikondang</option>
-
-			<option value="32.72.04.1001">Kota Bogor - Warudoyong</option>
-			<option value="32.72.04.1002">Kota Bogor - Nyomplong</option>
-			<option value="32.72.04.1003">Kota Bogor - Dayeuhluhur</option>
-			<option value="32.72.04.1004">Kota Bogor - Sukakarya</option>
-			<option value="32.72.04.1005">Kota Bogor - Benteng</option>
-
-			<option value="32.72.05.1001">Kota Bogor - Baros</option>
-			<option value="32.72.05.1002">Kota Bogor - Jayaraksa</option>
-			<option value="32.72.05.1003">Kota Bogor - Jayamekar</option>
-			<option value="32.72.05.1004">Kota Bogor - Sudajaya Hilir</option>
-
-			<option value="32.72.06.1001">Kota Bogor - Cipanengah</option>
-			<option value="32.72.06.1002">Kota Bogor - Situmekar</option>
-			<option value="32.72.06.1003">Kota Bogor - Lembursitu</option>
-			<option value="32.72.06.1004">Kota Bogor - Cikundul</option>
-			<option value="32.72.06.1005">Kota Bogor - Sindangsari</option>
-
-			<option value="32.72.07.1001">Kota Bogor - Cibeureum Hilir</option>
-			<option value="32.72.07.1002">Kota Bogor - Babakan</option>
-			<option value="32.72.07.1003">Kota Bogor - Sindangpalay</option>
-			<option value="32.72.07.1004">Kota Bogor - Limusnunggal</option>
-
-		  
-		  <!--
-		  <option value="1_2">Kota Jakarta Selatan</option>
-		  <option value="1_3">Kota Jakarta Timur</option>
-		  <option value="1_4">Kota Jakarta Utara</option>
-		  <option value="1_5">Kab. Kepulauan Seribu</option>
-		  
-		  <option value="2_0">Kota Bandung</option>
-		  <option value="2_1">Kota Banjar</option>
-		  <option value="2_2">Kota Bekasi</option>
-		  <option value="2_6">Cikarang</option>
-		  <option value="2_11">Kota Depok</option>
-		  <option value="2_13">Kab. Garut</option>
-		  <option value="2_15">Kab. Karawang</option>
-		  <option value="2_16">Kota Bogor</option>
-		  <option value="2_22">Kab. Purwakarta</option>
-		  <option value="2_26">Kab. Sukabumi</option>
-		  <option value="2_29">Kota Tasikmalaya</option>
-		  
-		  <option value="3_0">Kab. Serang</option>
-		  <option value="3_6">Kota Serang</option>
-		  <option value="3_13">Lebak (Rangkasbitung)</option>
-		  <option value="3_15">Kota Tangerang</option>
-		  
-		  <option value="4_2">Kota Bukittinggi</option>
-		  <option value="4_3">Kab. Agam</option>
-		  <option value="4_6">Kota Padang</option>
-		  <option value="4_8">Kota Padangpanjang</option>
-		  -->
-		</select> 
+    <span class="footer_speech">Cuaca Hari Ini Cuaca Besok Indonesia. Data oleh</span> <a href="https://data.bmkg.go.id/prakiraan-cuaca/" target="_blank">data.bmkg.go.id</a>  <small>
+	
+    <span class="dropdown dropdown-custom">
+        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+            Jakarta - Gambir
+        </button>
+        <ul class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton">
+            <li>
+                <input type="text" class="form-control mx-2" id="dropdownSearch" placeholder="Cari...">
+            </li>
+            <div id="dropdownItems" class="overflow-auto" style="max-height: 300px;"></div>
+        </ul>
+    </span>
+    <input type="hidden" id="selectedValue" value="31.71.01.1001">
+	
+	
 		<button type="button" class="btn btn-secondary btn-sm d-inline-flex focus-ring py-1 px-2 text-decoration-none border" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Info: Data yang sudah ditampilkan apa adanya berdasarkan data yang tersedia. Untuk kota-kota lain mungkin nanti ditampilkan.">?</button>
 		<button type="button" class="btn btn-warning btn-sm d-inline-flex focus-ring py-1 px-2 text-decoration-none border" data-bs-toggle="modal" data-bs-target="#exampleModal">Emas</button>
 		</small>
@@ -1049,6 +378,57 @@ function generateChartjs(ya,covidarray) {
 	}
 	
 
+/*
+function cvDate(x) {
+	//2020-04-13T00:00:00Z
+	//2020 04 14 00 00
+	//0123 45 67 89 01
+	x = x.toString();
+	var x1=x.substring(0,4);
+	var x2=x.substring(4,6);
+	var x3=x.substring(6,8);
+	var x4=x.substring(8,10);
+	var x5=x.substring(10,12);
+	var eDate = new Date(x1+'-'+x2+'-'+x3+'T00:00:00Z');
+	console.log(x1+'-'+x2+'-'+x3+'T00:00:00Z');
+	var eDate2 = eDate.toDateString()+' '+x4+':'+x5;
+	if(eDate2.slice(-5) == '00:00') { var eDate3 = 'Pagi'; }
+	else if(eDate2.slice(-5) == '06:00') { var eDate3 = 'Siang'; }
+	else if(eDate2.slice(-5) == '12:00') { var eDate3 = 'Malam'; }
+	else if(eDate2.slice(-5) == '18:00') { var eDate3 = 'Dini hari'; }
+	//Tue Feb 09 2021
+	//0123456789
+	var substr_date = eDate.toDateString().substring(0, 10);
+	return substr_date + ' ' + eDate3;
+}
+
+function cvWht(x) {
+	var cvx = null;
+	switch(x) {
+		case 0: cvx = "Cerah";break;
+		case 1: cvx = "Cerah berawan";break;
+		case 2: cvx = "Cerah berawan";break;
+		case 3: cvx = "Berawan";break;
+		case 4: cvx = "Berawan tebal";break;
+		case 5: cvx = "Kabur";break;
+		case 10: cvx = "Asap";break;
+		case 45: cvx = "Kabut";break;
+		case 60: cvx = "<span class='badge rounded-pill bg-light text-dark'>Hujan ringan</span>";break;
+		case 61: cvx = "<span class='badge rounded-pill bg-warning text-dark'>Hujan sedang</span>";break;
+		case 63: cvx = "<span class='badge rounded-pill bg-warning text-dark'>Hujan lebat</span>";break;
+		case 80: cvx = "<span class='badge rounded-pill bg-warning text-dark'>Hujan lokal</span>";break;
+		case 95: cvx = "<span class='badge rounded-pill bg-danger'>Hujan petir</span>";break;
+		case 97: cvx = "<span class='badge rounded-pill bg-danger'>Hujan petir</span>";break;
+		default:
+		cvx = "Tidak diketahui";
+	}	
+	return cvx;
+}
+
+
+
+
+*/
 }
 /* end generate */
 
@@ -1056,12 +436,762 @@ $( document ).ready(function() {
 $(function () {
   $('[data-toggle="popover"]').popover();
 });
-document.getElementById("select-area").selectedIndex = "232"; 
+//document.getElementById("select-area").selectedIndex = "232"; 
+
+
+
+
+function onSelect(value, text) {
+        console.log("Selected Value: ", value);
+        console.log("Selected Text: ", text);
+        // Add any other logic you need here
+		store_source_data(value);
+    }
+
+    $(document).ready(function () {
+        var options = [
+            { value: "13.71.01.1001", text: "Kota Padang - Belakang Pondok" },
+			{ value: "13.71.01.1002", text: "Kota Padang - Alang Laweh" },
+			{ value: "13.71.01.1003", text: "Kota Padang - Ranah Parak Rumbio" },
+			{ value: "13.71.01.1004", text: "Kota Padang - Pasa Gadang" },
+			{ value: "13.71.01.1005", text: "Kota Padang - Batang Arau" },
+			{ value: "13.71.01.1006", text: "Kota Padang - Seberang Palinggam" },
+			{ value: "13.71.01.1007", text: "Kota Padang - Seberang Padang" },
+			{ value: "13.71.01.1008", text: "Kota Padang - Mata Air" },
+			{ value: "13.71.01.1009", text: "Kota Padang - Rawang" },
+			{ value: "13.71.01.1010", text: "Kota Padang - Teluk Bayur" },
+			{ value: "13.71.01.1011", text: "Kota Padang - Air Manis" },
+			{ value: "13.71.01.1012", text: "Kota Padang - Bukit Gado-gado" },
+
+			{ value: "13.71.02.1001", text: "Kota Padang - Sawahan" },
+			{ value: "13.71.02.1002", text: "Kota Padang - Jati Baru" },
+			{ value: "13.71.02.1003", text: "Kota Padang - Jati" },
+			{ value: "13.71.02.1004", text: "Kota Padang - Sawahan Timur" },
+			{ value: "13.71.02.1005", text: "Kota Padang - Simpang Haru" },
+			{ value: "13.71.02.1006", text: "Kota Padang - Kubu Marapalam" },
+			{ value: "13.71.02.1007", text: "Kota Padang - Andalas" },
+			{ value: "13.71.02.1008", text: "Kota Padang - Kubu Dalam Parak Karakah" },
+			{ value: "13.71.02.1009", text: "Kota Padang - Parak Gadang Timur" },
+			{ value: "13.71.02.1010", text: "Kota Padang - Ganting Parak Gadang" },
+
+			{ value: "13.71.03.1001", text: "Kota Padang - Flamboyan Baru" },
+			{ value: "13.71.03.1002", text: "Kota Padang - Rimbo Kaluang" },
+			{ value: "13.71.03.1003", text: "Kota Padang - Ujung Gurun" },
+			{ value: "13.71.03.1004", text: "Kota Padang - Purus" },
+			{ value: "13.71.03.1005", text: "Kota Padang - Padang Pasir" },
+			{ value: "13.71.03.1006", text: "Kota Padang - Olo" },
+			{ value: "13.71.03.1007", text: "Kota Padang - Kampung Jao" },
+			{ value: "13.71.03.1008", text: "Kota Padang - Belakang Tangsi" },
+			{ value: "13.71.03.1009", text: "Kota Padang - Kampung Pondok" },
+			{ value: "13.71.03.1010", text: "Kota Padang - Berok Nipah" },
+
+			{ value: "13.71.04.1001", text: "Kota Padang - Air Tawar Timur" },
+			{ value: "13.71.04.1002", text: "Kota Padang - Air Tawar Barat" },
+			{ value: "13.71.04.1003", text: "Kota Padang - Ulak Karang Utara" },
+			{ value: "13.71.04.1004", text: "Kota Padang - Ulak Karang Selatan" },
+			{ value: "13.71.04.1005", text: "Kota Padang - Lolong Belanti" },
+			{ value: "13.71.04.1006", text: "Kota Padang - Alai Parak Kopi" },
+			{ value: "13.71.04.1007", text: "Kota Padang - Gunung Pangilun" },
+
+			{ value: "13.71.05.1001", text: "Kota Padang - Bungus Timur" },
+			{ value: "13.71.05.1002", text: "Kota Padang - Bungus Barat" },
+			{ value: "13.71.05.1003", text: "Kota Padang - Bungus Selatan" },
+			{ value: "13.71.05.1004", text: "Kota Padang - Teluk Kabung Utara" },
+			{ value: "13.71.05.1005", text: "Kota Padang - Teluk Kabung Tengah" },
+			{ value: "13.71.05.1006", text: "Kota Padang - Teluk Kabung Selatan" },
+
+			{ value: "13.71.06.1001", text: "Kota Padang - Cangkeh Nan XX" },
+			{ value: "13.71.06.1002", text: "Kota Padang - Kampung Baru Nan XX" },
+			{ value: "13.71.06.1003", text: "Kota Padang - Tanah Sirah Piai Nan XX" },
+			{ value: "13.71.06.1004", text: "Kota Padang - Tanjung Saba Pitamen Nan XX" },
+			{ value: "13.71.06.1005", text: "Kota Padang - Lubuk Begalung Nan XX" },
+			{ value: "13.71.06.1006", text: "Kota Padang - Gurun Laweh Nan XX" },
+			{ value: "13.71.06.1007", text: "Kota Padang - Tanjung Aua Nan XX" },
+			{ value: "13.71.06.1008", text: "Kota Padang - Koto Baru Nan XX" },
+			{ value: "13.71.06.1009", text: "Kota Padang - Banuaran Nan XX" },
+			{ value: "13.71.06.1010", text: "Kota Padang - Parak Laweh Pulau Aia Nan XX" },
+			{ value: "13.71.06.1011", text: "Kota Padang - Batung Taba Nan XX" },
+			{ value: "13.71.06.1012", text: "Kota Padang - Pagambiran Ampalu Nan XX" },
+			{ value: "13.71.06.1013", text: "Kota Padang - Pampangan Nan XX" },
+			{ value: "13.71.06.1014", text: "Kota Padang - Gates Nan XX" },
+			{ value: "13.71.06.1015", text: "Kota Padang - Kampung Jua Nan XX" },
+
+			{ value: "13.71.07.1001", text: "Kota Padang - Indarung" },
+			{ value: "13.71.07.1002", text: "Kota Padang - Padang Besi" },
+			{ value: "13.71.07.1003", text: "Kota Padang - Batu Gadang" },
+			{ value: "13.71.07.1004", text: "Kota Padang - Bandar Buat" },
+			{ value: "13.71.07.1005", text: "Kota Padang - Koto Lalang" },
+			{ value: "13.71.07.1006", text: "Kota Padang - Baringin" },
+			{ value: "13.71.07.1007", text: "Kota Padang - Tarantang" },
+
+			{ value: "13.71.08.1001", text: "Kota Padang - Limau Manis" },
+			{ value: "13.71.08.1002", text: "Kota Padang - Koto Lua" },
+			{ value: "13.71.08.1003", text: "Kota Padang - Limau Manis Selatan" },
+			{ value: "13.71.08.1004", text: "Kota Padang - Piai Tangah" },
+			{ value: "13.71.08.1005", text: "Kota Padang - Cupak Tangah" },
+			{ value: "13.71.08.1006", text: "Kota Padang - Pisang" },
+			{ value: "13.71.08.1007", text: "Kota Padang - Binuang Kampuang Dalam" },
+			{ value: "13.71.08.1008", text: "Kota Padang - Kapalo Koto" },
+			{ value: "13.71.08.1009", text: "Kota Padang - Lambung Bukik" },
+
+			{ value: "13.71.09.1001", text: "Kota Padang - Pasar Ambacang" },
+			{ value: "13.71.09.1002", text: "Kota Padang - Anduring" },
+			{ value: "13.71.09.1003", text: "Kota Padang - Lubuk Lintah" },
+			{ value: "13.71.09.1004", text: "Kota Padang - Ampang" },
+			{ value: "13.71.09.1005", text: "Kota Padang - Kalumbuk" },
+			{ value: "13.71.09.1006", text: "Kota Padang - Korong Gadang" },
+			{ value: "13.71.09.1007", text: "Kota Padang - Kuranji" },
+			{ value: "13.71.09.1008", text: "Kota Padang - Gunung Sarik" },
+			{ value: "13.71.09.1009", text: "Kota Padang - Sungai Sapih" },
+
+			{ value: "13.71.10.1001", text: "Kota Padang - Surau Gadang" },
+			{ value: "13.71.10.1002", text: "Kota Padang - Kampung Olo" },
+			{ value: "13.71.10.1003", text: "Kota Padang - Kurao Pagang" },
+			{ value: "13.71.10.1004", text: "Kota Padang - Gurun Laweh" },
+			{ value: "13.71.10.1005", text: "Kota Padang - Tabing Banda Gadang" },
+			{ value: "13.71.10.1006", text: "Kota Padang - Kampung Lapai" },
+
+			{ value: "13.71.11.1001", text: "Kota Padang - Balai Gadang" },
+			{ value: "13.71.11.1002", text: "Kota Padang - Lubuk Minturun" },
+			{ value: "13.71.11.1003", text: "Kota Padang - Aie Pacah" },
+			{ value: "13.71.11.1004", text: "Kota Padang - Dadok Tunggul Hitam" },
+			{ value: "13.71.11.1005", text: "Kota Padang - Koto Panjang Ikua Koto" },
+			{ value: "13.71.11.1006", text: "Kota Padang - Koto Pulai" },
+			{ value: "13.71.11.1007", text: "Kota Padang - Batipuh Panjang" },
+			{ value: "13.71.11.1008", text: "Kota Padang - Padang Sarai" },
+			{ value: "13.71.11.1009", text: "Kota Padang - Lubuk Buaya" },
+			{ value: "13.71.11.1010", text: "Kota Padang - Batang Kabung Ganting" },
+			{ value: "13.71.11.1011", text: "Kota Padang - Bungo Pasang" },
+			{ value: "13.71.11.1012", text: "Kota Padang - Parupuk Tabing" },
+			{ value: "13.71.11.1013", text: "Kota Padang - Pasie Nan Tigo" },
+
+
+			{ value: "13.06.01.2001", text: "Kab Agam - Tiku Selatan" },
+			{ value: "13.06.01.2002", text: "Kab Agam - Tiku Utara" },
+			{ value: "13.06.01.2003", text: "Kab Agam - Tiku Limo Jorong" },
+
+			{ value: "13.06.02.2001", text: "Kab Agam - Lubuk Basung" },
+			{ value: "13.06.02.2002", text: "Kab Agam - Geragahan" },
+			{ value: "13.06.02.2003", text: "Kab Agam - Kampung Pinang" },
+			{ value: "13.06.02.2004", text: "Kab Agam - Kampung Tangah" },
+			{ value: "13.06.02.2005", text: "Kab Agam - Manggopoh" },
+
+			{ value: "13.06.03.2001", text: "Kab Agam - Tanjung Sani" },
+			{ value: "13.06.03.2002", text: "Kab Agam - Sungai Batang" },
+			{ value: "13.06.03.2003", text: "Kab Agam - Maninjau" },
+			{ value: "13.06.03.2004", text: "Kab Agam - Bayua" },
+			{ value: "13.06.03.2006", text: "Kab Agam - Koto Kaciak" },
+			{ value: "13.06.03.2007", text: "Kab Agam - Duo Koto" },
+			{ value: "13.06.03.2008", text: "Kab Agam - Koto Gadang" },
+			{ value: "13.06.03.2009", text: "Kab Agam - Koto Malintang" },
+			{ value: "13.06.03.2010", text: "Kab Agam - Paninjauan" },
+
+			{ value: "13.06.04.2001", text: "Kab Agam - Matua Hilia" },
+			{ value: "13.06.04.2002", text: "Kab Agam - Matua Mudiak" },
+			{ value: "13.06.04.2003", text: "Kab Agam - Tigo Balai" },
+			{ value: "13.06.04.2004", text: "Kab Agam - Lawang" },
+			{ value: "13.06.04.2005", text: "Kab Agam - Parik Panjang" },
+			{ value: "13.06.04.2006", text: "Kab Agam - Panta Pauh" },
+
+			{ value: "13.06.05.2002", text: "Kab Agam - Sungai Landia" },
+			{ value: "13.06.05.2003", text: "Kab Agam - Balingka" },
+			{ value: "13.06.05.2004", text: "Kab Agam - Koto Tuo" },
+			{ value: "13.06.05.2005", text: "Kab Agam - Guguk Tabek Sarajo" },
+			{ value: "13.06.05.2006", text: "Kab Agam - Koto Panjang" },
+			{ value: "13.06.05.2007", text: "Kab Agam - Sianok Anam Suku" },
+			{ value: "13.06.05.2008", text: "Kab Agam - Koto Gadang" },
+
+			{ value: "13.06.06.2001", text: "Kab Agam - Padang Lua" },
+			{ value: "13.06.06.2002", text: "Kab Agam - Taluak Ampek Suku" },
+			{ value: "13.06.06.2003", text: "Kab Agam - Pakan Sinayan" },
+			{ value: "13.06.06.2004", text: "Kab Agam - Kubang Putiah" },
+			{ value: "13.06.06.2005", text: "Kab Agam - Ladang Laweh" },
+			{ value: "13.06.06.2006", text: "Kab Agam - Cingkariang" },
+			{ value: "13.06.06.2007", text: "Kab Agam - Sungai Tanang" },
+
+			{ value: "13.06.07.2001", text: "Kab Agam - Batu Taba" },
+			{ value: "13.06.07.2002", text: "Kab Agam - Biaro Gadang" },
+			{ value: "13.06.07.2003", text: "Kab Agam - Lambah" },
+			{ value: "13.06.07.2004", text: "Kab Agam - Panampung" },
+			{ value: "13.06.07.2005", text: "Kab Agam - Ampang Gadang" },
+			{ value: "13.06.07.2006", text: "Kab Agam - Pasia" },
+			{ value: "13.06.07.2008", text: "Kab Agam - Balai Gurah" },
+
+			{ value: "13.06.08.2001", text: "Kab Agam - Koto Tinggi" },
+			{ value: "13.06.08.2002", text: "Kab Agam - Tabek Panjang" },
+			{ value: "13.06.08.2004", text: "Kab Agam - Simarasok" },
+			{ value: "13.06.08.2005", text: "Kab Agam - Padang Tarok" },
+			{ value: "13.06.08.2006", text: "Kab Agam - Salo" },
+			{ value: "13.06.08.2007", text: "Kab Agam - Koto Baru" },
+
+			{ value: "13.06.09.2001", text: "Kab Agam - Koto Tangah" },
+			{ value: "13.06.09.2003", text: "Kab Agam - Gadut" },
+			{ value: "13.06.09.2004", text: "Kab Agam - Kapau" },
+
+			{ value: "13.06.10.2001", text: "Kab Agam - Koto Rantang" },
+			{ value: "13.06.10.2002", text: "Kab Agam - Pasia Laweh" },
+			{ value: "13.06.10.2003", text: "Kab Agam - Pagadih" },
+			{ value: "13.06.10.2004", text: "Kab Agam - Nan Tujuah" },
+
+			{ value: "13.06.11.2001", text: "Kab Agam - Baringin" },
+			{ value: "13.06.11.2002", text: "Kab Agam - Sipinang" },
+			{ value: "13.06.11.2003", text: "Kab Agam - Sungai Puar" },
+			{ value: "13.06.11.2004", text: "Kab Agam - Ampek Koto Palembayan" },
+			{ value: "13.06.11.2005", text: "Kab Agam - Tigo Koto Silungkang" },
+			{ value: "13.06.11.2006", text: "Kab Agam - Salareh Aia" },
+
+			{ value: "13.06.12.2001", text: "Kab Agam - Padang Laweh" },
+			{ value: "13.06.12.2002", text: "Kab Agam - Sungai Pua" },
+			{ value: "13.06.12.2003", text: "Kab Agam - Batagak" },
+			{ value: "13.06.12.2004", text: "Kab Agam - Batu Palano" },
+			{ value: "13.06.12.2005", text: "Kab Agam - Sariak" },
+
+			{ value: "13.06.13.2001", text: "Kab Agam - Batu Kambing" },
+			{ value: "13.06.13.2002", text: "Kab Agam - Sitalang" },
+			{ value: "13.06.13.2003", text: "Kab Agam - Bawan" },
+			{ value: "13.06.13.2004", text: "Kab Agam - Sitanang" },
+
+			{ value: "13.06.14.2001", text: "Kab Agam - Canduang Koto Laweh" },
+			{ value: "13.06.14.2002", text: "Kab Agam - Lasi" },
+			{ value: "13.06.14.2003", text: "Kab Agam - Bukik Batabuah" },
+
+			{ value: "13.06.15.2001", text: "Kab Agam - Magek" },
+			{ value: "13.06.15.2002", text: "Kab Agam - Kamang Hilia" },
+			{ value: "13.06.15.2003", text: "Kab Agam - Kamang Mudiak" },
+
+			{ value: "13.06.16.2001", text: "Kab Agam - Malalak Utara" },
+			{ value: "13.06.16.2002", text: "Kab Agam - Malalak Timur" },
+			{ value: "13.06.16.2003", text: "Kab Agam - Malalak Selatan" },
+			{ value: "13.06.16.2004", text: "Kab Agam - Malalak Barat" },
+
+
+			{ value: "13.74.01.1001", text: "Kota Padang Panjang - Ganting" },
+			{ value: "13.74.01.1002", text: "Kota Padang Panjang - Sigando" },
+			{ value: "13.74.01.1003", text: "Kota Padang Panjang - Ekor Lubuk" },
+			{ value: "13.74.01.1004", text: "Kota Padang Panjang - Ngalau" },
+			{ value: "13.74.01.1005", text: "Kota Padang Panjang - Guguk Malintang" },
+			{ value: "13.74.01.1006", text: "Kota Padang Panjang - Koto Panjang" },
+			{ value: "13.74.01.1007", text: "Kota Padang Panjang - Koto Katik" },
+			{ value: "13.74.01.1008", text: "Kota Padang Panjang - Tanah Pak Lambik" },
+
+			{ value: "13.74.02.1001", text: "Kota Padang Panjang - Bukit Surungan" },
+			{ value: "13.74.02.1002", text: "Kota Padang Panjang - Pasar Usang" },
+			{ value: "13.74.02.1003", text: "Kota Padang Panjang - Kampung Manggis" },
+			{ value: "13.74.02.1004", text: "Kota Padang Panjang - Silaing Bawah" },
+			{ value: "13.74.02.1005", text: "Kota Padang Panjang - Silaing Atas" },
+			{ value: "13.74.02.1006", text: "Kota Padang Panjang - Pasar Baru" },
+			{ value: "13.74.02.1007", text: "Kota Padang Panjang - Tanah Hitam" },
+			{ value: "13.74.02.1008", text: "Kota Padang Panjang - Balai-balai" },
+
+
+			{ value: "13.75.01.1001", text: "Kota Bukittinggi - Tarok Dipo" },
+			{ value: "13.75.01.1002", text: "Kota Bukittinggi - Bukik Cangang/Kayu Rmg." },
+			{ value: "13.75.01.1003", text: "Kota Bukittinggi - Pakan Kurai" },
+			{ value: "13.75.01.1004", text: "Kota Bukittinggi - Aur Tajungkang/Tgh. Sawah" },
+			{ value: "13.75.01.1005", text: "Kota Bukittinggi - Benteng Pasar Atas" },
+			{ value: "13.75.01.1006", text: "Kota Bukittinggi - Kayu Kubu" },
+			{ value: "13.75.01.1007", text: "Kota Bukittinggi - Bukik Apik Puhun" },
+
+			{ value: "13.75.02.1001", text: "Kota Bukittinggi - Campago Guguk Bulek" },
+			{ value: "13.75.02.1002", text: "Kota Bukittinggi - Campago Ipuh" },
+			{ value: "13.75.02.1003", text: "Kota Bukittinggi - Puhun Tembok" },
+			{ value: "13.75.02.1004", text: "Kota Bukittinggi - Kubu Gulai Bancah" },
+			{ value: "13.75.02.1005", text: "Kota Bukittinggi - Puhun Pintu Kabun" },
+			{ value: "13.75.02.1006", text: "Kota Bukittinggi - Pulai Anak Air" },
+			{ value: "13.75.02.1007", text: "Kota Bukittinggi - Koto Selayan" },
+			{ value: "13.75.02.1008", text: "Kota Bukittinggi - Garegeh" },
+			{ value: "13.75.02.1009", text: "Kota Bukittinggi - Manggis/Ganting" },
+
+			{ value: "13.75.03.1001", text: "Kota Bukittinggi - Aur Kuning" },
+			{ value: "13.75.03.1002", text: "Kota Bukittinggi - Birugo" },
+			{ value: "13.75.03.1003", text: "Kota Bukittinggi - Belakang Balok" },
+			{ value: "13.75.03.1004", text: "Kota Bukittinggi - Sapiran" },
+			{ value: "13.75.03.1005", text: "Kota Bukittinggi - Kubu Tanjung" },
+			{ value: "13.75.03.1006", text: "Kota Bukittinggi - Pakan Labuh" },
+			{ value: "13.75.03.1007", text: "Kota Bukittinggi - Parit Rantang" },
+			{ value: "13.75.03.1008", text: "Kota Bukittinggi - Ladang Cakiah" },
+
+
+
+			{ value: "31.01.01.1001", text: "Jakarta - Pulau Panggang" },
+			{ value: "31.01.01.1002", text: "Jakarta - Pulau Kelapa" },
+			{ value: "31.01.01.1003", text: "Jakarta - Pulau Harapan" },
+
+			{ value: "31.01.02.1001", text: "Jakarta - Pulau Untung Jawa" },
+			{ value: "31.01.02.1002", text: "Jakarta - Pulau Tidung" },
+			{ value: "31.01.02.1003", text: "Jakarta - Pulau Pari" },
+
+
+			{ value: "31.71.01.1001", text: "Jakarta - Gambir" },
+			{ value: "31.71.01.1002", text: "Jakarta - Cideng" },
+			{ value: "31.71.01.1003", text: "Jakarta - Petojo Utara" },
+			{ value: "31.71.01.1004", text: "Jakarta - Petojo Selatan" },
+			{ value: "31.71.01.1005", text: "Jakarta - Kebon Kelapa" },
+			{ value: "31.71.01.1006", text: "Jakarta - Duri Pulo" },
+
+			{ value: "31.71.02.1001", text: "Jakarta - Pasar Baru" },
+			{ value: "31.71.02.1002", text: "Jakarta - Karang Anyar" },
+			{ value: "31.71.02.1003", text: "Jakarta - Kartini" },
+			{ value: "31.71.02.1004", text: "Jakarta - Gunung Sahari Utara" },
+			{ value: "31.71.02.1005", text: "Jakarta - Mangga Dua Selatan" },
+
+			{ value: "31.71.03.1001", text: "Jakarta - Kemayoran" },
+			{ value: "31.71.03.1002", text: "Jakarta - Kebon Kosong" },
+			{ value: "31.71.03.1003", text: "Jakarta - Harapan Mulia" },
+			{ value: "31.71.03.1004", text: "Jakarta - Serdang" },
+			{ value: "31.71.03.1005", text: "Jakarta - Gunung Sahari Selatan" },
+			{ value: "31.71.03.1006", text: "Jakarta - Cempaka Baru" },
+			{ value: "31.71.03.1007", text: "Jakarta - Sumur Batu" },
+			{ value: "31.71.03.1008", text: "Jakarta - Utan Panjang" },
+
+			{ value: "31.71.04.1001", text: "Jakarta - Senen" },
+			{ value: "31.71.04.1002", text: "Jakarta - Kenari" },
+			{ value: "31.71.04.1003", text: "Jakarta - Paseban" },
+			{ value: "31.71.04.1004", text: "Jakarta - Kramat" },
+			{ value: "31.71.04.1005", text: "Jakarta - Kwitang" },
+			{ value: "31.71.04.1006", text: "Jakarta - Bungur" },
+
+			{ value: "31.71.05.1001", text: "Jakarta - Cempaka Putih Timur" },
+			{ value: "31.71.05.1002", text: "Jakarta - Cempaka Putih Barat" },
+			{ value: "31.71.05.1003", text: "Jakarta - Rawasari" },
+
+			{ value: "31.71.06.1001", text: "Jakarta - Menteng" },
+			{ value: "31.71.06.1002", text: "Jakarta - Pegangsaan" },
+			{ value: "31.71.06.1003", text: "Jakarta - Cikini" },
+			{ value: "31.71.06.1004", text: "Jakarta - Gondangdia" },
+			{ value: "31.71.06.1005", text: "Jakarta - Kebon Sirih" },
+
+			{ value: "31.71.07.1001", text: "Jakarta - Gelora" },
+			{ value: "31.71.07.1002", text: "Jakarta - Bendungan Hilir" },
+			{ value: "31.71.07.1003", text: "Jakarta - Karet Tengsin" },
+			{ value: "31.71.07.1004", text: "Jakarta - Petamburan" },
+			{ value: "31.71.07.1005", text: "Jakarta - Kebon Melati" },
+			{ value: "31.71.07.1006", text: "Jakarta - Kebon Kacang" },
+			{ value: "31.71.07.1007", text: "Jakarta - Kampung Bali" },
+
+			{ value: "31.71.08.1001", text: "Jakarta - Johar Baru" },
+			{ value: "31.71.08.1002", text: "Jakarta - Kampung Rawa" },
+			{ value: "31.71.08.1003", text: "Jakarta - Galur" },
+			{ value: "31.71.08.1004", text: "Jakarta - Tanah Tinggi" },
+
+
+			{ value: "31.72.01.1001", text: "Jakarta - Penjaringan" },
+			{ value: "31.72.01.1002", text: "Jakarta - Kamal Muara" },
+			{ value: "31.72.01.1003", text: "Jakarta - Kapuk Muara" },
+			{ value: "31.72.01.1004", text: "Jakarta - Pejagalan" },
+			{ value: "31.72.01.1005", text: "Jakarta - Pluit" },
+
+			{ value: "31.72.02.1001", text: "Jakarta - Tanjung Priok" },
+			{ value: "31.72.02.1002", text: "Jakarta - Sunter Jaya" },
+			{ value: "31.72.02.1003", text: "Jakarta - Papanggo" },
+			{ value: "31.72.02.1004", text: "Jakarta - Sungai Bambu" },
+			{ value: "31.72.02.1005", text: "Jakarta - Kebon Bawang" },
+			{ value: "31.72.02.1006", text: "Jakarta - Sunter Agung" },
+			{ value: "31.72.02.1007", text: "Jakarta - Warakas" },
+
+			{ value: "31.72.03.1001", text: "Jakarta - Koja" },
+			{ value: "31.72.03.1002", text: "Jakarta - Tugu Utara" },
+			{ value: "31.72.03.1003", text: "Jakarta - Lagoa" },
+			{ value: "31.72.03.1004", text: "Jakarta - Rawa Badak Utara" },
+			{ value: "31.72.03.1005", text: "Jakarta - Tugu Selatan" },
+			{ value: "31.72.03.1006", text: "Jakarta - Rawa Badak Selatan" },
+
+			{ value: "31.72.04.1001", text: "Jakarta - Cilincing" },
+			{ value: "31.72.04.1002", text: "Jakarta - Sukapura" },
+			{ value: "31.72.04.1003", text: "Jakarta - Marunda" },
+			{ value: "31.72.04.1004", text: "Jakarta - Kalibaru" },
+			{ value: "31.72.04.1005", text: "Jakarta - Semper Timur" },
+			{ value: "31.72.04.1006", text: "Jakarta - Rorotan" },
+			{ value: "31.72.04.1007", text: "Jakarta - Semper Barat" },
+
+			{ value: "31.72.05.1001", text: "Jakarta - Pademangan Timur" },
+			{ value: "31.72.05.1002", text: "Jakarta - Pademangan Barat" },
+			{ value: "31.72.05.1003", text: "Jakarta - Ancol" },
+
+			{ value: "31.72.06.1001", text: "Jakarta - Kelapa Gading Timur" },
+			{ value: "31.72.06.1002", text: "Jakarta - Pegangsaan Dua" },
+			{ value: "31.72.06.1003", text: "Jakarta - Kelapa Gading Barat" },
+
+
+			{ value: "31.73.01.1001", text: "Jakarta - Cengkareng Barat" },
+			{ value: "31.73.01.1002", text: "Jakarta - Duri Kosambi" },
+			{ value: "31.73.01.1003", text: "Jakarta - Rawa Buaya" },
+			{ value: "31.73.01.1004", text: "Jakarta - Kedaung Kali Angke" },
+			{ value: "31.73.01.1005", text: "Jakarta - Kapuk" },
+			{ value: "31.73.01.1006", text: "Jakarta - Cengkareng Timur" },
+
+			{ value: "31.73.02.1001", text: "Jakarta - Grogol" },
+			{ value: "31.73.02.1002", text: "Jakarta - Tanjung Duren Utara" },
+			{ value: "31.73.02.1003", text: "Jakarta - Tomang" },
+			{ value: "31.73.02.1004", text: "Jakarta - Jelambar" },
+			{ value: "31.73.02.1005", text: "Jakarta - Tanjung Duren Selatan" },
+			{ value: "31.73.02.1006", text: "Jakarta - Jelambar Baru" },
+			{ value: "31.73.02.1007", text: "Jakarta - Wijaya Kusuma" },
+
+			{ value: "31.73.03.1001", text: "Jakarta - Taman Sari" },
+			{ value: "31.73.03.1002", text: "Jakarta - Krukut" },
+			{ value: "31.73.03.1003", text: "Jakarta - Maphar" },
+			{ value: "31.73.03.1004", text: "Jakarta - Tangki" },
+			{ value: "31.73.03.1005", text: "Jakarta - Mangga Besar" },
+			{ value: "31.73.03.1006", text: "Jakarta - Keagungan" },
+			{ value: "31.73.03.1007", text: "Jakarta - Glodok" },
+			{ value: "31.73.03.1008", text: "Jakarta - Pinangsia" },
+
+			{ value: "31.73.04.1001", text: "Jakarta - Tambora" },
+			{ value: "31.73.04.1002", text: "Jakarta - Kali Anyar" },
+			{ value: "31.73.04.1003", text: "Jakarta - Duri Utara" },
+			{ value: "31.73.04.1004", text: "Jakarta - Tanah Sereal" },
+			{ value: "31.73.04.1005", text: "Jakarta - Krendang" },
+			{ value: "31.73.04.1006", text: "Jakarta - Jembatan Besi" },
+			{ value: "31.73.04.1007", text: "Jakarta - Angke" },
+			{ value: "31.73.04.1008", text: "Jakarta - Jembatan Lima" },
+			{ value: "31.73.04.1009", text: "Jakarta - Pekojan" },
+			{ value: "31.73.04.1010", text: "Jakarta - Roa Malaka" },
+			{ value: "31.73.04.1011", text: "Jakarta - Duri Selatan" },
+
+			{ value: "31.73.05.1001", text: "Jakarta - Kebon Jeruk" },
+			{ value: "31.73.05.1002", text: "Jakarta - Sukabumi Utara" },
+			{ value: "31.73.05.1003", text: "Jakarta - Sukabumi Selatan" },
+			{ value: "31.73.05.1004", text: "Jakarta - Kelapa Dua" },
+			{ value: "31.73.05.1005", text: "Jakarta - Duri Kepa" },
+			{ value: "31.73.05.1006", text: "Jakarta - Kedoya Utara" },
+			{ value: "31.73.05.1007", text: "Jakarta - Kedoya Selatan" },
+
+			{ value: "31.73.06.1001", text: "Jakarta - Kalideres" },
+			{ value: "31.73.06.1002", text: "Jakarta - Semanan" },
+			{ value: "31.73.06.1003", text: "Jakarta - Tegal Alur" },
+			{ value: "31.73.06.1004", text: "Jakarta - Kamal" },
+			{ value: "31.73.06.1005", text: "Jakarta - Pegadungan" },
+
+			{ value: "31.73.07.1001", text: "Jakarta - Palmerah" },
+			{ value: "31.73.07.1002", text: "Jakarta - Slipi" },
+			{ value: "31.73.07.1003", text: "Jakarta - Kota Bambu Utara" },
+			{ value: "31.73.07.1004", text: "Jakarta - Jatipulo" },
+			{ value: "31.73.07.1005", text: "Jakarta - Kemanggisan" },
+			{ value: "31.73.07.1006", text: "Jakarta - Kota Bambu Selatan" },
+
+			{ value: "31.73.08.1001", text: "Jakarta - Kembangan Utara" },
+			{ value: "31.73.08.1002", text: "Jakarta - Meruya Utara" },
+			{ value: "31.73.08.1003", text: "Jakarta - Meruya Selatan" },
+			{ value: "31.73.08.1004", text: "Jakarta - Srengseng" },
+			{ value: "31.73.08.1005", text: "Jakarta - Joglo" },
+			{ value: "31.73.08.1006", text: "Jakarta - Kembangan Selatan" },
+
+
+			{ value: "31.74.01.1001", text: "Jakarta - Tebet Timur" },
+			{ value: "31.74.01.1002", text: "Jakarta - Tebet Barat" },
+			{ value: "31.74.01.1003", text: "Jakarta - Menteng Dalam" },
+			{ value: "31.74.01.1004", text: "Jakarta - Kebon Baru" },
+			{ value: "31.74.01.1005", text: "Jakarta - Bukit Duri" },
+			{ value: "31.74.01.1006", text: "Jakarta - Manggarai Selatan" },
+			{ value: "31.74.01.1007", text: "Jakarta - Manggarai" },
+
+			{ value: "31.74.02.1001", text: "Jakarta - Setia Budi" },
+			{ value: "31.74.02.1002", text: "Jakarta - Karet Semanggi" },
+			{ value: "31.74.02.1003", text: "Jakarta - Karet Kuningan" },
+			{ value: "31.74.02.1004", text: "Jakarta - Karet" },
+			{ value: "31.74.02.1005", text: "Jakarta - Menteng Atas" },
+			{ value: "31.74.02.1006", text: "Jakarta - Pasar Manggis" },
+			{ value: "31.74.02.1007", text: "Jakarta - Guntur" },
+			{ value: "31.74.02.1008", text: "Jakarta - Kuningan Timur" },
+
+			{ value: "31.74.03.1001", text: "Jakarta - Mampang Prapatan" },
+			{ value: "31.74.03.1002", text: "Jakarta - Bangka" },
+			{ value: "31.74.03.1003", text: "Jakarta - Pela Mampang" },
+			{ value: "31.74.03.1004", text: "Jakarta - Tegal Parang" },
+			{ value: "31.74.03.1005", text: "Jakarta - Kuningan Barat" },
+
+			{ value: "31.74.04.1001", text: "Jakarta - Pasar Minggu" },
+			{ value: "31.74.04.1002", text: "Jakarta - Jati Padang" },
+			{ value: "31.74.04.1003", text: "Jakarta - Cilandak Timur" },
+			{ value: "31.74.04.1004", text: "Jakarta - Ragunan" },
+			{ value: "31.74.04.1005", text: "Jakarta - Pejaten Timur" },
+			{ value: "31.74.04.1006", text: "Jakarta - Pejaten Barat" },
+			{ value: "31.74.04.1007", text: "Jakarta - Kebagusan" },
+
+			{ value: "31.74.05.1001", text: "Jakarta - Kebayoran Lama Utara" },
+			{ value: "31.74.05.1002", text: "Jakarta - Pondok Pinang" },
+			{ value: "31.74.05.1003", text: "Jakarta - Cipulir" },
+			{ value: "31.74.05.1004", text: "Jakarta - Grogol Utara" },
+			{ value: "31.74.05.1005", text: "Jakarta - Grogol Selatan" },
+			{ value: "31.74.05.1006", text: "Jakarta - Kebayoran Lama Selatan" },
+
+			{ value: "31.74.06.1001", text: "Jakarta - Cilandak Barat" },
+			{ value: "31.74.06.1002", text: "Jakarta - Lebak Bulus" },
+			{ value: "31.74.06.1003", text: "Jakarta - Pondok Labu" },
+			{ value: "31.74.06.1004", text: "Jakarta - Gandaria Selatan" },
+			{ value: "31.74.06.1005", text: "Jakarta - Cipete Selatan" },
+
+			{ value: "31.74.07.1001", text: "Jakarta - Melawai" },
+			{ value: "31.74.07.1002", text: "Jakarta - Gunung" },
+			{ value: "31.74.07.1003", text: "Jakarta - Kramat Pela" },
+			{ value: "31.74.07.1004", text: "Jakarta - Selong" },
+			{ value: "31.74.07.1005", text: "Jakarta - Rawa Barat" },
+			{ value: "31.74.07.1006", text: "Jakarta - Senayan" },
+			{ value: "31.74.07.1007", text: "Jakarta - Pulo" },
+			{ value: "31.74.07.1008", text: "Jakarta - Petogogan" },
+			{ value: "31.74.07.1009", text: "Jakarta - Gandaria Utara" },
+			{ value: "31.74.07.1010", text: "Jakarta - Cipete Utara" },
+
+			{ value: "31.74.08.1001", text: "Jakarta - Pancoran" },
+			{ value: "31.74.08.1002", text: "Jakarta - Kalibata" },
+			{ value: "31.74.08.1003", text: "Jakarta - Rawajati" },
+			{ value: "31.74.08.1004", text: "Jakarta - Duren Tiga" },
+			{ value: "31.74.08.1005", text: "Jakarta - Pengadegan" },
+			{ value: "31.74.08.1006", text: "Jakarta - Cikoko" },
+
+			{ value: "31.74.09.1001", text: "Jakarta - Jagakarsa" },
+			{ value: "31.74.09.1002", text: "Jakarta - Srengseng Sawah" },
+			{ value: "31.74.09.1003", text: "Jakarta - Ciganjur" },
+			{ value: "31.74.09.1004", text: "Jakarta - Lenteng Agung" },
+			{ value: "31.74.09.1005", text: "Jakarta - Tanjung Barat" },
+			{ value: "31.74.09.1006", text: "Jakarta - Cipedak" },
+
+			{ value: "31.74.10.1001", text: "Jakarta - Pesanggrahan" },
+			{ value: "31.74.10.1002", text: "Jakarta - Bintaro" },
+			{ value: "31.74.10.1003", text: "Jakarta - Petukangan Utara" },
+			{ value: "31.74.10.1004", text: "Jakarta - Petukangan Selatan" },
+			{ value: "31.74.10.1005", text: "Jakarta - Ulujami" },
+
+
+			{ value: "31.75.01.1001", text: "Jakarta - Pisangan Baru" },
+			{ value: "31.75.01.1002", text: "Jakarta - Utan Kayu Utara" },
+			{ value: "31.75.01.1003", text: "Jakarta - Kayu Manis" },
+			{ value: "31.75.01.1004", text: "Jakarta - Palmeriam" },
+			{ value: "31.75.01.1005", text: "Jakarta - Kebon Manggis" },
+			{ value: "31.75.01.1006", text: "Jakarta - Utan Kayu Selatan" },
+
+			{ value: "31.75.02.1001", text: "Jakarta - Pulo Gadung" },
+			{ value: "31.75.02.1002", text: "Jakarta - Pisangan Timur" },
+			{ value: "31.75.02.1003", text: "Jakarta - Cipinang" },
+			{ value: "31.75.02.1004", text: "Jakarta - Jatinegara Kaum" },
+			{ value: "31.75.02.1005", text: "Jakarta - Rawamangun" },
+			{ value: "31.75.02.1006", text: "Jakarta - Kayu Putih" },
+			{ value: "31.75.02.1007", text: "Jakarta - Jati" },
+
+			{ value: "31.75.03.1001", text: "Jakarta - Kampung Melayu" },
+			{ value: "31.75.03.1002", text: "Jakarta - Bidara Cina" },
+			{ value: "31.75.03.1003", text: "Jakarta - Bali Mester" },
+			{ value: "31.75.03.1004", text: "Jakarta - Rawa Bunga" },
+			{ value: "31.75.03.1005", text: "Jakarta - Cipinang Cempedak" },
+			{ value: "31.75.03.1006", text: "Jakarta - Cipinang Muara" },
+			{ value: "31.75.03.1007", text: "Jakarta - Cipinang Besar Selatan" },
+			{ value: "31.75.03.1008", text: "Jakarta - Cipinang Besar Utara" },
+
+			{ value: "31.75.04.1001", text: "Jakarta - Kramatjati" },
+			{ value: "31.75.04.1002", text: "Jakarta - Tengah" },
+			{ value: "31.75.04.1003", text: "Jakarta - Dukuh" },
+			{ value: "31.75.04.1004", text: "Jakarta - Batu Ampar" },
+			{ value: "31.75.04.1005", text: "Jakarta - Balekambang" },
+			{ value: "31.75.04.1006", text: "Jakarta - Cililitan" },
+			{ value: "31.75.04.1007", text: "Jakarta - Cawang" },
+
+			{ value: "31.75.05.1001", text: "Jakarta - Gedong" },
+			{ value: "31.75.05.1002", text: "Jakarta - Baru" },
+			{ value: "31.75.05.1003", text: "Jakarta - Cijantung" },
+			{ value: "31.75.05.1004", text: "Jakarta - Kalisari" },
+			{ value: "31.75.05.1005", text: "Jakarta - Pekayon" },
+
+			{ value: "31.75.06.1001", text: "Jakarta - Jatinegara" },
+			{ value: "31.75.06.1002", text: "Jakarta - Rawa Terate" },
+			{ value: "31.75.06.1003", text: "Jakarta - Penggilingan" },
+			{ value: "31.75.06.1004", text: "Jakarta - Cakung Timur" },
+			{ value: "31.75.06.1005", text: "Jakarta - Pulo Gebang" },
+			{ value: "31.75.06.1006", text: "Jakarta - Ujung Menteng" },
+			{ value: "31.75.06.1007", text: "Jakarta - Cakung Barat" },
+
+			{ value: "31.75.07.1001", text: "Jakarta - Duren Sawit" },
+			{ value: "31.75.07.1002", text: "Jakarta - Pondok Bambu" },
+			{ value: "31.75.07.1003", text: "Jakarta - Klender" },
+			{ value: "31.75.07.1004", text: "Jakarta - Pondok Kelapa" },
+			{ value: "31.75.07.1005", text: "Jakarta - Malaka Sari" },
+			{ value: "31.75.07.1006", text: "Jakarta - Malaka Jaya" },
+			{ value: "31.75.07.1007", text: "Jakarta - Pondok Kopi" },
+
+			{ value: "31.75.08.1001", text: "Jakarta - Makasar" },
+			{ value: "31.75.08.1002", text: "Jakarta - Pinangranti" },
+			{ value: "31.75.08.1003", text: "Jakarta - Kebon Pala" },
+			{ value: "31.75.08.1004", text: "Jakarta - Halim Perdana Kusuma" },
+			{ value: "31.75.08.1005", text: "Jakarta - Cipinang Melayu" },
+
+			{ value: "31.75.09.1001", text: "Jakarta - Ciracas" },
+			{ value: "31.75.09.1002", text: "Jakarta - Cibubur" },
+			{ value: "31.75.09.1003", text: "Jakarta - Kelapa Dua Wetan" },
+			{ value: "31.75.09.1004", text: "Jakarta - Susukan" },
+			{ value: "31.75.09.1005", text: "Jakarta - Rambutan" },
+
+			{ value: "31.75.10.1001", text: "Jakarta - Cipayung" },
+			{ value: "31.75.10.1002", text: "Jakarta - Cilangkap" },
+			{ value: "31.75.10.1003", text: "Jakarta - Pondok Ranggon" },
+			{ value: "31.75.10.1004", text: "Jakarta - Munjul" },
+			{ value: "31.75.10.1005", text: "Jakarta - Setu" },
+			{ value: "31.75.10.1006", text: "Jakarta - Bambu Apus" },
+			{ value: "31.75.10.1007", text: "Jakarta - Lubang Buaya" },
+			{ value: "31.75.10.1008", text: "Jakarta - Ceger" },
+
+
+			{ value: "32.71.01.1001", text: "Kota Bogor - Batu Tulis" },
+			{ value: "32.71.01.1002", text: "Kota Bogor - Bondongan" },
+			{ value: "32.71.01.1003", text: "Kota Bogor - Empang" },
+			{ value: "32.71.01.1004", text: "Kota Bogor - Lawanggintung" },
+			{ value: "32.71.01.1005", text: "Kota Bogor - Pamoyanan" },
+			{ value: "32.71.01.1006", text: "Kota Bogor - Ranggamekar" },
+			{ value: "32.71.01.1007", text: "Kota Bogor - Mulyaharja" },
+			{ value: "32.71.01.1008", text: "Kota Bogor - Cikaret" },
+			{ value: "32.71.01.1009", text: "Kota Bogor - Bojongkerta" },
+			{ value: "32.71.01.1010", text: "Kota Bogor - Rancamaya" },
+			{ value: "32.71.01.1011", text: "Kota Bogor - Kertamaya" },
+			{ value: "32.71.01.1012", text: "Kota Bogor - Harjasari" },
+			{ value: "32.71.01.1013", text: "Kota Bogor - Muarasari" },
+			{ value: "32.71.01.1014", text: "Kota Bogor - Genteng" },
+			{ value: "32.71.01.1015", text: "Kota Bogor - Pakuan" },
+			{ value: "32.71.01.1016", text: "Kota Bogor - Cipaku" },
+
+			{ value: "32.71.02.1001", text: "Kota Bogor - Sukasari" },
+			{ value: "32.71.02.1002", text: "Kota Bogor - Baranangsiang" },
+			{ value: "32.71.02.1003", text: "Kota Bogor - Katulampa" },
+			{ value: "32.71.02.1004", text: "Kota Bogor - Sindangsari" },
+			{ value: "32.71.02.1005", text: "Kota Bogor - Sindangrasa" },
+			{ value: "32.71.02.1006", text: "Kota Bogor - Tajur" },
+
+			{ value: "32.71.03.1001", text: "Kota Bogor - Gudang" },
+			{ value: "32.71.03.1002", text: "Kota Bogor - Paledang" },
+			{ value: "32.71.03.1003", text: "Kota Bogor - Pabaton" },
+			{ value: "32.71.03.1004", text: "Kota Bogor - Cibogor" },
+			{ value: "32.71.03.1005", text: "Kota Bogor - Babakan" },
+			{ value: "32.71.03.1006", text: "Kota Bogor - Sempur" },
+			{ value: "32.71.03.1007", text: "Kota Bogor - Tegallega" },
+			{ value: "32.71.03.1008", text: "Kota Bogor - Babakan Pasar" },
+			{ value: "32.71.03.1009", text: "Kota Bogor - Panaragan" },
+			{ value: "32.71.03.1010", text: "Kota Bogor - Ciwaringin" },
+			{ value: "32.71.03.1011", text: "Kota Bogor - Kebon Kalapa" },
+
+			{ value: "32.71.04.1001", text: "Kota Bogor - Menteng" },
+			{ value: "32.71.04.1002", text: "Kota Bogor - Sindang Barang" },
+			{ value: "32.71.04.1003", text: "Kota Bogor - Bubulak" },
+			{ value: "32.71.04.1004", text: "Kota Bogor - Margajaya" },
+			{ value: "32.71.04.1005", text: "Kota Bogor - Balumbang Jaya" },
+			{ value: "32.71.04.1006", text: "Kota Bogor - Situ Gede" },
+			{ value: "32.71.04.1007", text: "Kota Bogor - Semplak" },
+			{ value: "32.71.04.1008", text: "Kota Bogor - Cilendek Barat" },
+			{ value: "32.71.04.1009", text: "Kota Bogor - Cilendek Timur" },
+			{ value: "32.71.04.1010", text: "Kota Bogor - Curug Mekar" },
+			{ value: "32.71.04.1011", text: "Kota Bogor - Curug" },
+			{ value: "32.71.04.1012", text: "Kota Bogor - Pasir Jaya" },
+			{ value: "32.71.04.1013", text: "Kota Bogor - Pasir Kuda" },
+			{ value: "32.71.04.1014", text: "Kota Bogor - Pasir Mulya" },
+			{ value: "32.71.04.1015", text: "Kota Bogor - Gunung Batu" },
+			{ value: "32.71.04.1016", text: "Kota Bogor - Loji" },
+
+			{ value: "32.71.05.1001", text: "Kota Bogor - Bantarjati" },
+			{ value: "32.71.05.1002", text: "Kota Bogor - Tegal Gundil" },
+			{ value: "32.71.05.1003", text: "Kota Bogor - Kedung Halang" },
+			{ value: "32.71.05.1004", text: "Kota Bogor - Ciparigi" },
+			{ value: "32.71.05.1005", text: "Kota Bogor - Cibuluh" },
+			{ value: "32.71.05.1006", text: "Kota Bogor - Ciluar" },
+			{ value: "32.71.05.1007", text: "Kota Bogor - Tanah Baru" },
+			{ value: "32.71.05.1008", text: "Kota Bogor - Cimahpar" },
+
+			{ value: "32.71.06.1001", text: "Kota Bogor - Tanah Sareal" },
+			{ value: "32.71.06.1002", text: "Kota Bogor - Kebon Pedes" },
+			{ value: "32.71.06.1003", text: "Kota Bogor - Kedung Badak" },
+			{ value: "32.71.06.1004", text: "Kota Bogor - Sukaresmi" },
+			{ value: "32.71.06.1005", text: "Kota Bogor - Kedung Waringin" },
+			{ value: "32.71.06.1006", text: "Kota Bogor - Kedung Jaya" },
+			{ value: "32.71.06.1007", text: "Kota Bogor - Sukadamai" },
+			{ value: "32.71.06.1008", text: "Kota Bogor - Mekar Wangi" },
+			{ value: "32.71.06.1009", text: "Kota Bogor - Kencana" },
+			{ value: "32.71.06.1010", text: "Kota Bogor - Kayu Manis" },
+			{ value: "32.71.06.1011", text: "Kota Bogor - Cibadak" },
+
+
+			{ value: "32.72.01.1001", text: "Kota Bogor - Gunung Puyuh" },
+			{ value: "32.72.01.1002", text: "Kota Bogor - Karamat" },
+			{ value: "32.72.01.1003", text: "Kota Bogor - Sriwidari" },
+			{ value: "32.72.01.1004", text: "Kota Bogor - Karang Tengah" },
+
+			{ value: "32.72.02.1001", text: "Kota Bogor - Cikole" },
+			{ value: "32.72.02.1002", text: "Kota Bogor - Selabatu" },
+			{ value: "32.72.02.1003", text: "Kota Bogor - Gunungparang" },
+			{ value: "32.72.02.1004", text: "Kota Bogor - Kebonjati" },
+			{ value: "32.72.02.1005", text: "Kota Bogor - Cisarua" },
+			{ value: "32.72.02.1006", text: "Kota Bogor - Subangjaya" },
+
+			{ value: "32.72.03.1001", text: "Kota Bogor - Citamiang" },
+			{ value: "32.72.03.1002", text: "Kota Bogor - Tipar" },
+			{ value: "32.72.03.1003", text: "Kota Bogor - Nanggeleng" },
+			{ value: "32.72.03.1004", text: "Kota Bogor - Gedongpanjang" },
+			{ value: "32.72.03.1005", text: "Kota Bogor - Cikondang" },
+
+			{ value: "32.72.04.1001", text: "Kota Bogor - Warudoyong" },
+			{ value: "32.72.04.1002", text: "Kota Bogor - Nyomplong" },
+			{ value: "32.72.04.1003", text: "Kota Bogor - Dayeuhluhur" },
+			{ value: "32.72.04.1004", text: "Kota Bogor - Sukakarya" },
+			{ value: "32.72.04.1005", text: "Kota Bogor - Benteng" },
+
+			{ value: "32.72.05.1001", text: "Kota Bogor - Baros" },
+			{ value: "32.72.05.1002", text: "Kota Bogor - Jayaraksa" },
+			{ value: "32.72.05.1003", text: "Kota Bogor - Jayamekar" },
+			{ value: "32.72.05.1004", text: "Kota Bogor - Sudajaya Hilir" },
+
+			{ value: "32.72.06.1001", text: "Kota Bogor - Cipanengah" },
+			{ value: "32.72.06.1002", text: "Kota Bogor - Situmekar" },
+			{ value: "32.72.06.1003", text: "Kota Bogor - Lembursitu" },
+			{ value: "32.72.06.1004", text: "Kota Bogor - Cikundul" },
+			{ value: "32.72.06.1005", text: "Kota Bogor - Sindangsari" },
+
+			{ value: "32.72.07.1001", text: "Kota Bogor - Cibeureum Hilir" },
+			{ value: "32.72.07.1002", text: "Kota Bogor - Babakan" },
+			{ value: "32.72.07.1003", text: "Kota Bogor - Sindangpalay" },
+			{ value: "32.72.07.1004", text: "Kota Bogor - Limusnunggal" }
+
+            // Add more options here...
+        ];
+        
+        var dropdownItems = $('#dropdownItems');
+        options.forEach(function(option) {
+            dropdownItems.append('<li><button class="dropdown-item" data-value="' + option.value + '">' + option.text + '</button></li>');
+        });
+
+        $('#dropdownSearch').on('keyup', function () {
+            var searchVal = $(this).val().toLowerCase();
+            $('#dropdownItems .dropdown-item').each(function () {
+                $(this).toggle($(this).text().toLowerCase().includes(searchVal));
+            });
+        });
+
+        $('#dropdownItems').on('click', '.dropdown-item', function () {
+            var selectedText = $(this).text();
+            var selectedValue = $(this).data('value');
+
+            var tempButton = $('#dropdownMenuButton').clone().css({
+                visibility: 'hidden',
+                position: 'absolute',
+                width: 'auto'
+            }).appendTo('body');
+
+            tempButton.text(selectedText);
+            var newWidth = Math.min(tempButton.width() + 20, 200); // Limit to 200px max
+            tempButton.remove();
+
+            $('#dropdownMenuButton').text(selectedText).css('width', newWidth + 'px');
+            $('#selectedValue').val(selectedValue);
+            onSelect(selectedValue, selectedText);
+        });
+
+        $('#dropdownMenuButton').on('click', function () {
+            setTimeout(function() {
+                $('#dropdownSearch').focus();
+            }, 20);
+        });
+        
+
+
 
 });
 
 var xb = null;
-var cur_sarea=$('.select-area').val();
+var cur_sarea="31.71.01.1001";
 
 if(cur_sarea!=null) {
 	var scur_sarea = cur_sarea.substring(0, 14);
@@ -1075,9 +1205,9 @@ if(xb!=null) {
 	generateChartjs(1,xb);
 }
 
-$(document).on('change', '.select-area', function() {
-	var cur_sarea=$(this).val();
-	//console.log(cur_sarea);
+function store_source_data(cur_sarea) {
+	//var cur_sarea=$(this).val();
+	console.log(cur_sarea);
 
 	if(cur_sarea!=null) {
 		var scur_sarea = cur_sarea.substring(0, 14);
@@ -1093,7 +1223,8 @@ $(document).on('change', '.select-area', function() {
 	else {
 		alert('Kota belum dipilih...');return false;
 	}
-	
+
+}	
 
 });
 </script>
